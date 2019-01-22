@@ -1,0 +1,572 @@
+/*--------------------------------------------------------------------------------------------------------------
+STYLE GENERAL DE LA PAGE
+--------------------------------------------------------------------------------------------------------------*/
+*{
+  margin: 0; /* Supression des styles automatiques du navigateur */
+  padding: 0; /* marges interieures et exterieures initialisées a 0 */
+  --black: #3d3d3d; /* Declaration des couleurs globales du document */
+  --white: #fcfcfc; /* permet de les rappeller plus facilement */
+  --grey: #6e6e6e;
+  --lightgrey: #eaeaea;
+  --blue: #5cadd3;
+  max-width: 100vw; /* empeche tous les elements de depasser de la largeur de l'ecran */
+  /* Inclus les marges et les bordures dans le calcul des dimensions */
+}
+body{
+  font-family: 'Roboto', sans-serif; /* Definit 'Roboto' comme police generale du document */
+  overflow-x: hidden; /* Masque la barre de scroll horizontal */
+  width: 100%;
+  font-size: 3vh;
+}
+
+/*--------------------------------------------------------------------------------------------------------------
+STYLE DE LA PARTIE EN TETE DU SITE
+--------------------------------------------------------------------------------------------------------------*/
+header{
+  position: fixed; /* fixe le header en haut de la page */
+  top: 0; /* haut de la topbar positionné a 0 par rapport au haut du document*/
+  left: 0; /* gauche de la topbar positionnée a 0 par rapport a la gauche du document*/
+  right: 0; /* droite de la topbar positionnée a 0 par rapport a la droite du document */
+  width: 100vw; /* la largeur de la topbar prend tout l'espace disponible */
+  background-color: var(--white); /* donne une couleur de fond au header */
+  z-index: 10; /* Place le header au dessus de tout les autres elements */
+}
+.topbar{
+  display: flex; /* donne la propriété "Flex" au container "topbar" contenant le header*/
+  flex-direction: column; /* fixe l'axe principal de la topbar sur l'axe vertical */
+  align-items: center; /*aligne les objets de la topbar sur son axe secondaire (horizontal)*/
+  max-height: 5%; /* empeche la topbar de prendre plus de 5% de la hauteur totale */
+  margin-top: 1%; /* marge exterieure superieure de la topbar fixée a 1% */
+  padding-bottom: 2%; /* marge du bas de la topbar fixée a 5% */
+}
+#Logo img{
+  margin-top: 3%; /* defini l'espace entre l'image du logo et le haut de la page */
+  max-height: 7vh; /* empeche l'image du logo de prendre plus de 5% de la hauteur visible */
+}
+#Menu{
+  display: inline-flex; /* fixe la propriété flex sur inline pour placer les elements du menu */
+  justify-content: center; /* aligne les objets sur l'axe principal (horizontal) */
+  align-items: baseline; /* aligne les objets sur l'axe secondaire */
+  border-top: solid 0.1em var(--blue); /* Donne une bordure decorative au dessus du menu */
+}
+.menuItems{
+  padding-top: 1%; /* defini la marge interieure superieure */
+  margin: 1% 2%; /* defini les marges exterieures */
+  color: var(--grey); /* defini la couleur du texte */
+  text-decoration: none; /* retire la decoration par defaut par defaut appliquée aux liens par le browser */
+  font-size: 1em; /* donne une taille relative a la police d'ecriture */
+  line-height: 1.2em; /* defini la hauteur de ligne */
+}
+a:hover.menuItems{
+  color: var(--blue); /* modifie la couleur du lien du menu lors du survol avec la souris */
+  font-family: 'Roboto-Black'; /* modifie la police utilisée lors du survol */
+}
+
+/*--------------------------------------------------------------------------------------------------------------
+STYLE GENERAL DES SECTIONS
+--------------------------------------------------------------------------------------------------------------*/
+.content{
+  margin-top: 25%;
+  background-color: var(--white);
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  flex-basis: 100%;
+}
+.sections{
+  margin: 1% auto;
+}
+.sectionTitle{
+  text-align: center;
+  font-family: 'Roboto-Black';
+  color: var(--blue);
+  background-color: var(--white);
+  font-size: 2em;
+  width: 100%;
+  white-space: nowrap;
+  text-transform: uppercase;
+}
+/*--------------------------------------------------------------------------------------------------------------
+STYLE DU SLIDER
+--------------------------------------------------------------------------------------------------------------*/
+#Slider{
+  margin: 0;
+  font-family: 'Roboto';
+  color: var(--black);
+}
+.slides{
+  min-height: 31vh;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+}
+#Slide1{
+  background-image: url(../IMG/slider/bg1.jpg);
+}
+#Slide2{
+  background-image: url(../IMG/slider/bg2.jpg);
+  transform:scaleX(-1);
+}
+#Slide2 aside{
+  transform:scaleX(-1);
+}
+.slides aside{
+  background-color: rgba(66,66,66,.75);
+  border-radius: .25em;
+  font-size: 0.75em;
+  color: var(--white);
+  max-width: 66vw;
+  position: relative;
+}
+.slides #Slide1 aside{
+  float:left;
+}
+.slides #Slide1 aside{
+  float:right;
+}
+.presentation{
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2%;
+}
+.slideshow h1{
+  font-family: 'Roboto-Bold';
+  text-shadow: 0.5% 0.5% solid var(--black);
+  text-transform: uppercase;
+  font-size: 1.5em;
+}
+.slideshow h1 strong{
+  color: var(--blue);
+}
+.accroche{
+  font-family: 'Roboto-Italic';
+  text-transform: uppercase;
+  font-size: 1em;
+  line-height: 1.15em;
+}
+.sidetext{
+  font-family: 'Roboto-Medium';
+  font-size: 1em;
+}
+.slideshow a{
+  font-family: 'Roboto';
+  text-decoration: none;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 5%;
+  float: right;
+  padding: .25em .5em;
+}
+.asideButton{
+  align-self: flex-end;
+  margin-bottom: 6%;
+}
+.arrow{
+  display: none;
+}
+
+/*--------------------------------------------------------------------------------------------------------------
+STYLE DE LA SECTION SERVICES
+--------------------------------------------------------------------------------------------------------------*/
+#Services{
+  margin-top: 2%;
+}
+.services{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  font-family: 'Roboto';
+  color: var(--black);
+}
+#LineBreaker{
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+#LineBreaker hr{
+  max-width: 20vw;
+  color: var(--blue);
+  margin: auto;
+}
+.dotBreaker{
+  color: var(--blue);
+  max-width: 10vw;
+  margin: auto;
+}
+.sections aside .undertext{
+  font-family: 'Roboto-Medium';
+  text-align: center;
+  margin: 0 auto;
+  padding: 0.5% 1%;
+  text-transform: uppercase;
+}
+#ListeServices li{
+  background-image: url(../IMG/main-feature.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
+}
+#ListeServices li:nth-child(2){
+  justify-content: flex-end;
+}
+.serviceWrapper{
+  max-width: 66%;
+  background-color: rgba(92, 173, 211, .9);
+  padding: 2%;
+  color: var(--white);
+  text-shadow: .5% .5% var(--black);
+}
+.serviceWrapper h2{
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Roboto-Bold';
+}
+.serviceWrapper p{
+  line-height: 1.2em;
+  font-size: 1em;
+  text-align: left;
+  font-family: 'Roboto-Medium';
+}
+#Feature{
+  display: none;
+}
+
+/*--------------------------------------------------------------------------------------------------------------
+STYLE DE LA SECTION PORTFOLIO
+--------------------------------------------------------------------------------------------------------------*/
+.wrapperPortfolio{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+#MenuPortfolio{
+  margin: 1%;
+}
+#MenuPortfolio ul{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  background-color: rgba(92, 173, 211, .9);
+  border-radius: 2.5%;
+}
+#MenuPortfolio *{
+  text-shadow: 0.5% 0.5% solid var(--black);
+  text-decoration: none;
+  text-align: center;
+}
+.menuPortfolio{
+  display: block;
+  border-radius: 5%;
+  padding: 1% 2%;
+}
+.menuPortfolio::after{
+  content: "";
+  background-color: var(--black);
+  width: 50%;
+  border-radius: 25%;
+}
+.menuPortfolio a{
+  font-family: 'Roboto-Medium';
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--white);
+}
+.containerPortfolio{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.itemsPortfolio img{
+  max-width: 45vw;
+}
+
+/*--------------------------------------------------------------------------------------------------------------
+STYLE DE LA SECTION CONTACT
+--------------------------------------------------------------------------------------------------------------*/
+#Contact{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#Map{
+  order: 1;
+}
+#Map iframe{
+  width: 100vw;
+}
+#Contact fieldset{
+  width: 100vw;
+  order: 0;
+  border: none;
+}
+#Contact aside p{
+  text-align: center;
+  font-family: 'Roboto-Medium';
+  font-size: 1.2rem;
+}
+h1.formElements{
+ white-space: pre-wrap;
+}
+form{
+background-color: var(--blue);
+display: flex;
+flex-direction: column;
+flex-wrap: wrap;
+justify-content: center;
+align-items: center;
+padding: .25rem;
+}
+form p input, form p textarea{
+  width: 90vw;
+  margin: 0.25rem auto;
+  border: none;
+  height: 1.75rem;
+  font-family: 'Roboto-Italic';
+  padding-left: 0.5rem;
+  font-size: 1.25rem;
+}
+form p textarea{
+  height: 5rem;
+}
+.button input{
+  width: 50vw;
+  color:var(--blue);
+  background-color: var(--white);
+  font-family: 'Roboto-Bold';
+  font-size: 1.25rem;
+  font-variant: small-caps;
+}
+
+/*--------------------------------------------------------------------------------------------------------------
+STYLE POUR ECRANS LARGES
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 720px) {
+
+/*Style general*/
+*{
+  padding: 0;
+  margin: 0;
+  border: none;
+}
+.content{
+  margin-top: 15.5vh;
+}
+.sections{
+  min-height: 15vh;
+}
+.sectionTitle{
+  color: var(--black);
+}
+
+/* Style du header */
+header{
+  position: fixed; /* L'attribut 'fixed' maintiens la barre de menu a la position fixée lors du scroll*/
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white); /*J'appelle ma variable de couleur blanche*/
+  font-family: 'Roboto-Bold', sans-serif;
+  max-width: 100vw;
+  min-height: 15vh;
+}
+.topbar{
+  margin: 0;
+  padding: 0;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#Logo{
+  margin-left: 10vw;
+}
+#Logo img{
+  margin: 0;
+  max-height: none;
+}
+#Menu{
+  border: none;
+  margin-right: 15vw;
+}
+.menuItems{
+  padding: 0;
+  margin: 0 2%;
+  font-size: 1rem;
+  line-height: 15vh;
+}
+.menuItems:hover{
+  border-top: 0.25rem solid var(--blue);
+  color: var(--black);
+}
+
+/*Style du Slider*/
+.slideshow{
+  height: 80vh;
+}
+.slides{
+  position: relative; /*en position relative pour permettre de mieu placer l'enfant*/
+  min-height: 75vh;
+}
+.slides aside{
+  background-color: transparent;
+  max-width: 35vw;
+  margin: 10% 0% 10% 11%;
+}
+.presentation{
+  position: static;
+  font-family: 'Roboto-Black';
+  font-size: 1.2rem;
+  line-height: 1.5rem;
+  color: var(--white);
+  justify-content: flex-start;
+}
+.asideTitle h1, .asideTitle p{
+  display: inline;
+  font-size: 1.75rem;
+  font-family: 'Roboto-Black';
+}
+.sidetext{
+  font-size: 0.9rem;
+  margin: 2% 0;
+}
+.asideButton{
+  align-self: baseline;
+}
+.slideshow a{
+  border-radius: 2.5%;
+  font-family: 'Roboto-Medium';
+  font-size: 0.9rem;
+  padding: 5% 7.5%;
+  white-space: nowrap;
+}
+.slideshow .slideContainer:nth-child(2){
+  position: relative;
+  left: -200%;
+}
+
+/*Style des Services*/
+#Services aside{
+  width: 100vw;
+}
+#LineBreaker hr{
+  width: 5vw;
+  color: var(--black);
+  margin: 0;
+  border: 0.05rem solid var(--black);
+}
+.dotBreaker{
+  margin: 0;
+}
+.sections aside .undertext{
+  font-family: 'Roboto';
+  font-size: 1rem;
+  padding: 1.5% 1%;
+  text-transform: initial;
+}
+#ServicesContainer{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+#Feature{
+  display: block;
+  width: 510px;
+  height: 320px;
+  max-width: 60vw;
+  margin: 0 5%;
+}
+#ListeServices li, #ListeServices li:nth-child(2){
+  background: none;
+  justify-content: center;
+}
+.serviceWrapper{
+  background-color: transparent;
+  color: var(--black);
+  text-shadow: none;
+}
+.serviceWrapper h2{
+  font-size: 1.2rem;
+  text-transform: initial;
+  text-align: left;
+  text-decoration: none;
+  font-family: 'Roboto-Black';
+}
+.serviceWrapper p {
+  line-height: 1rem;
+  font-size: 1rem;
+  text-align: left;
+  font-family: 'Roboto-Light';
+  margin: 2% 0;
+}
+
+/*Style du Portfolio*/
+#MenuPortfolio ul{
+  background-color: var(--lightgrey);
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+.menuPortfolio a{
+  color: var(--grey);
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+.containerPortfolio{
+  margin: 0 2%;
+  justify-content: space-evenly;
+}
+.itemsPortfolio img{
+  max-width: 20vw;
+}
+
+/*Style du Contact*/
+#Contact{
+  height: 80vh;
+}
+#Map{
+  order: 0;
+}
+#Map iframe{
+  min-height: 80vh;
+  width: 99vw;
+  margin: 0 auto;
+}
+#ContactInfos #LineBreaker{
+  display: none;
+}
+#Contact fieldset{
+  max-width: 20vw;
+  position: relative;
+  top: -75vh;
+  right: -35vw;
+}
+form{
+  background-color: rgba(220,220,220,.75);
+}
+.formElements{
+  width: 19vw;
+}
+#ContactMessage{
+  resize: none;
+}
+
+
+/*----------------------------------------------------------
+FERMETURE DU MEDIA QUERIES
+-----------------------------------------------------------*/
+}
+
