@@ -315,7 +315,7 @@ STYLE DE LA SECTION CONTACT
   order: 0;
   border: none;
 }
-#Contact aside p{
+#ContactInfos p{
   text-align: center;
   font-family: 'Roboto-Medium';
   font-size: 1.2rem;
@@ -545,6 +545,9 @@ header{
   width: 99vw;
   margin: 0 auto;
 }
+#ContactInfos{
+  margin-bottom: 3%;
+}
 #ContactInfos #LineBreaker{
   display: none;
 }
@@ -553,29 +556,71 @@ header{
   position: relative;
   top: -75vh;
   right: -35vw;
+  background-color: rgba(240,240,255,.75);
+  padding: 2% 1%;
+  height: 60vh;
 }
-form{
-  background-color: rgba(220,220,220,.75);
-  flex-direction: row;
-  justify-content: initial;
+#Contact fieldset form{
+  background-color: transparent;
 }
 .formElements, .formElements *{
   width: 19vw;
 }
+.formElements *{
+  border: 0.5px solid var(--grey);
+  border-radius: 2.75%;
+}
 #ContactInfos h1{
-  font-size: 1.2rem;
+  font-size: 1.5rem;
+  text-align: left;
+  background-color: transparent;
+  margin-bottom: 3%;
+  text-transform: capitalize;
+  font-family: 'Roboto-Black';
+  font-weight: bold;
 }
 #ContactInfos p, #ContactInfos h2{
-  font-size: 1rem;
-  background-color: rgba(220,220,220,.75);
+  font-family: 'Roboto-Medium';
+  font-size: 0.9rem;
+  text-align: left;
+  color: var(--grey);
+  margin: 0;
+  padding: 1%;
 }
 #ContactMessage{
   resize: none;
+  font-style: normal;
+  min-height: 22vh;
 }
 form .button input{
-  max-width: 20vw;
+  width: 9vw;
+  font-size: 0.9rem;
+  font-family: 'Roboto-Bold';
+  text-align: center;
+  padding: 1% 1.5%;
+  color: var(--white);
+  background-color: var(--blue);
+  white-space: nowrap;
+  text-transform: capitalize;
+  font-variant: normal;
 }
 
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  font-style: normal;
+  font-size: 1rem;
+}
+::-moz-placeholder { /* Firefox 19+ */
+  font-style: normal;
+  font-size: 1rem;
+}
+:-ms-input-placeholder { /* IE 10+ */
+  font-style: normal;
+  font-size: 1rem;
+}
+:-moz-placeholder { /* Firefox 18- */
+  font-style: normal;
+  font-size: 1rem;
+}
 
 /*----------------------------------------------------------
 FERMETURE DU MEDIA QUERIES
