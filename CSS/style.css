@@ -302,15 +302,7 @@ STYLE DE LA SECTION PORTFOLIO
 .itemsPortfolio img{
   max-width: 45vw;
 }
-#r1, #r2, #r3, #r4, .itemsPortfolio{
-  display: none;
-}
-#r1::checked ~ #BoxedPortfolio .containerPortfolio .allWorks,
-#r2::checked ~ #BoxedPortfolio .containerPortfolio .creative,
-#r3::checked ~ #BoxedPortfolio .containerPortfolio .corporate,
-#r4::checked ~ #BoxedPortfolio .containerPortfolio .portfolio{
-  display: block;
-}
+
 
 /*--------------------------------------------------------------------------------------------------------------
 STYLE DE LA SECTION CONTACT
@@ -628,6 +620,21 @@ header{
 }
 .itemsPortfolio img{
   max-width: 20vw;
+}
+#r1, #r2, #r3, #r4{
+  display: none;
+}
+#r1::checked ~ #BoxedPortfolio .containerPortfolio .allWorks,
+#r2::checked ~ #BoxedPortfolio .containerPortfolio .creative,
+#r3::checked ~ #BoxedPortfolio .containerPortfolio .corporate,
+#r4::checked ~ #BoxedPortfolio .containerPortfolio .portfolio{
+  display: block;
+}
+.itemsLabel{
+  position: relative;
+  top: -5vh;
+  background-color: rgba(0,0,0, .5);
+  color: var(--white);
 }
 
 /*Style du Contact*/
