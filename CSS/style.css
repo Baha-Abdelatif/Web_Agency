@@ -18,6 +18,10 @@ body{
   width: 100%;
   font-size: 3vh;
 }
+.anchor{
+  position: relative;
+  top: -15vh;
+}
 
 /*--------------------------------------------------------------------------------------------------------------
 STYLE DE LA PARTIE EN TETE DU SITE
@@ -745,10 +749,15 @@ header{
   font-style: normal;
   min-height: 22vh;
 }
+form p input, form p textarea{
+  font-family: 'Roboto';
+}
+form p textarea{
+  padding-top: 0.5rem;
+}
 form .button input{
   width: 9vw;
   font-size: 0.9rem;
-  font-family: 'Roboto-Bold';
   text-align: center;
   padding: 1% 1.5%;
   color: var(--white);
@@ -757,23 +766,24 @@ form .button input{
   text-transform: capitalize;
   font-variant: normal;
 }
-input::placeholder{
-  font-style: normal;
+::placeholder{
+  padding-left: 0.5rem;
+  font-size: 1rem;
 }
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-  font-style: normal;
+  padding-left: 0.5rem;
   font-size: 1rem;
 }
 ::-moz-placeholder { /* Firefox 19+ */
-  font-style: normal;
+ padding-left: 0.5rem;
+ font-size: 1rem;
+}
+::-ms-input-placeholder { /* IE 10+ */
+  padding-left: 0.5rem;
   font-size: 1rem;
 }
-:-ms-input-placeholder { /* IE 10+ */
-  font-style: normal;
-  font-size: 1rem;
-}
-:-moz-placeholder { /* Firefox 18- */
-  font-style: normal;
+::-moz-placeholder { /* Firefox 18- */
+  padding-left: 0.5rem;
   font-size: 1rem;
 }
 
