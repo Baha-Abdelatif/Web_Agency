@@ -302,6 +302,15 @@ STYLE DE LA SECTION PORTFOLIO
 .itemsPortfolio img{
   max-width: 45vw;
 }
+#r1, #r2, #r3, #r4, .itemsPortfolio{
+  display: none;
+}
+#r1::checked ~ #BoxedPortfolio .containerPortfolio .allWorks,
+#r2::checked ~ #BoxedPortfolio .containerPortfolio .creative,
+#r3::checked ~ #BoxedPortfolio .containerPortfolio .corporate,
+#r4::checked ~ #BoxedPortfolio .containerPortfolio .portfolio{
+  display: block;
+}
 
 /*--------------------------------------------------------------------------------------------------------------
 STYLE DE LA SECTION CONTACT
@@ -448,6 +457,14 @@ header{
   padding: 1.5rem;
   border-radius: 50%;
 }
+.arrow:hover{
+  background-color: rgba(255,255,255,.5);
+  color: var(--black);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
 #ArrowLeft{
   left: -1.5rem;
 }
@@ -518,10 +535,10 @@ header{
   width: 100vw;
 }
 #LineBreaker hr{
-  width: 3.5vw;
+  width: 4.5vw;
   color: var(--grey);
   margin: 0;
-  border: 0.08rem solid var(--lightgrey);
+  border: 0.07rem solid var(--lightgrey);
 }
 .dotBreaker{
   margin: 0;
