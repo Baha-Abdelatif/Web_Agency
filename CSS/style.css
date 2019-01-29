@@ -666,6 +666,8 @@ header{
   display: block;
   font-style: normal;
   font-variant: normal;
+  line-height: 1.25rem;
+  font-size: 1.75rem;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: 'Font-Awesome';
