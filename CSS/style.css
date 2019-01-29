@@ -705,19 +705,19 @@ header{
   display: none;
 }
 #Contact fieldset{
-  max-width: 20vw;
+  max-width: 30vw;
   position: relative;
   top: -75vh;
-  right: -35vw;
+  right: -30vw;
   background-color: rgba(240,240,255,.75);
   padding: 2% 1%;
-  height: 60vh;
+  height: 63vh;
 }
 #Contact fieldset form{
   background-color: transparent;
 }
 .formElements, .formElements *{
-  width: 19vw;
+  width: 29vw;
 }
 .formElements *{
   border: 0.5px solid var(--grey);
@@ -757,7 +757,9 @@ form .button input{
   text-transform: capitalize;
   font-variant: normal;
 }
-
+input::placeholder{
+  font-style: normal;
+}
 ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
   font-style: normal;
   font-size: 1rem;
