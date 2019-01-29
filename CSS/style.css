@@ -621,7 +621,7 @@ header{
 .itemsPortfolio img{
   max-width: 20vw;
 }
-#r1, #r2, #r3, #r4{
+#r1, #r2, #r3, #r4, .itemsPortfolio{
   display: none;
 }
 #r1::checked ~ #BoxedPortfolio .containerPortfolio .allWorks,
@@ -632,9 +632,11 @@ header{
 }
 .itemsLabel{
   position: relative;
-  top: -5vh;
+  top: -10vh;
   background-color: rgba(0,0,0, .5);
   color: var(--white);
+  font-family: 'Roboto-Medium';
+  padding: 0.7vh 1vw;
 }
 
 /*Style du Contact*/
