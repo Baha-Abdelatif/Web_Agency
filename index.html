@@ -32,10 +32,10 @@
         <!-- La DIV qui contient ma premiere slide -->
         <div class="slideContainer">
           <div class="slides active" id="Slide1" >
+            <div id="ArrowLeft" class="arrow">
+              <i class="fas fa-angle-left"></i>
+            </div>
             <aside>
-              <div id="ArrowLeft" class="arrow">
-                <i class="fas fa-angle-left"></i>
-              </div>
               <div class="presentation">
                 <div class="asideSlide">
                   <div class="asideTitle">
@@ -52,18 +52,18 @@
                   </a>
                 </div>
               </div>
-              <div id="ArrowRight" class="arrow">
-                <i class="fas fa-angle-right"></i>
-              </div>
             </aside>
+            <div id="ArrowRight" class="arrow">
+              <i class="fas fa-angle-right"></i>
+            </div>
           </div>
         </div>
         <div class="slideContainer">
           <div class="slides" id="Slide2">
+            <div id="ArrowLeft" class="arrow">
+              <i class="fas fa-angle-left"></i>
+            </div>
             <aside>
-              <div id="ArrowLeft" class="arrow">
-                <i class="fas fa-angle-left"></i>
-              </div>
               <div class="presentation">
                 <div class="asideSlide">
                   <div class="asideTitle">
@@ -80,10 +80,10 @@
                   </a>
                 </div>
               </div>
+              </aside>
               <div id="ArrowRight" class="arrow">
                 <i class="fas fa-angle-right"></i>
               </div>
-            </aside>
           </div>
         </div>
       </div>
@@ -103,19 +103,31 @@
           <img id="Feature" src="IMG/main-feature.png" alt="Un design au service de votre site">
           <div id="ListeServices">
             <ul>
-              <li>
+              <li id="UX">
+                <div class="serviceDot">
+                  <i class="fa fa-chart-line"></i>
+                  <i class="fa fa-circle dot"></i>
+                </div>
                 <div class="serviceWrapper">
                   <h2>UX design</h2>
                   <p>Chez WebAgency l'utilisateur est au centre de notre reflexion. Chaque design est pensé de maniere a lui fournir une experience unique. Demarquez vous et affirmez votre identité avec un site a vos mesures.</p>
                 </div>
               </li>
-              <li>
+              <li id="UI">
+                <div class="serviceDot">
+                  <i class="fa fa-cubes"></i>
+                  <i class="fa fa-circle dot"></i>
+                </div>
                 <div class="serviceWrapper">
                   <h2>UI design</h2>
                   <p>L'ergonomie de votre interface est le vecteur par lequel l'utilisateur est conquis. WebAgency est la garantie d'une navigation fluide et confortable au service de votre message.</p>
                 </div>
               </li>
-              <li>
+              <li id="SEO">
+                <div class="serviceDot">
+                  <i class="fa fa-chart-pie"></i>
+                  <i class="fa fa-circle dot"></i>
+                </div>
                 <div class="serviceWrapper">
                   <h2>SEO</h2>
                   <p>Nos experts en referencement vous aideront a faire de votre marque une reference incontournable dans votre domaine. Google est votre ami ! Laissez notre savoir-faire lui parler pour vous.</p>

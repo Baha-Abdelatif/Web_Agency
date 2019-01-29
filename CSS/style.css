@@ -184,6 +184,9 @@ STYLE DE LA SECTION SERVICES
   font-family: 'Roboto';
   color: var(--black);
 }
+.serviceDot{
+  display: none;
+}
 #LineBreaker{
   display: flex;
   flex-wrap: nowrap;
@@ -405,13 +408,15 @@ header{
 }
 .menuItems{
   padding: 0;
-  margin: 0 2%;
+  padding-top: 0.25rem;
+  margin: 0 5%;
   font-size: 1rem;
   line-height: 15vh;
 }
 .menuItems:hover{
   border-top: 0.25rem solid var(--blue);
   color: var(--black);
+  padding: 0;
 }
 
 /*Style du Slider*/
@@ -419,12 +424,18 @@ header{
   height: 80vh;
 }
 .slides{
-  position: relative; /*en position relative pour permettre de mieu placer l'enfant*/
   min-height: 75vh;
+}
+.arrow{
+  display: none;
+  background-color: var(--lightgrey);
+  color: var(--black);
+  padding: 1rem;
+  border-radius: 50%;
 }
 .slides aside{
   background-color: transparent;
-  max-width: 35vw;
+  max-width: 40vw;
   margin: 10% 0% 10% 11%;
 }
 .presentation{
@@ -437,22 +448,31 @@ header{
 }
 .asideTitle h1, .asideTitle p{
   display: inline;
-  font-size: 1.75rem;
+  font-size: 2rem;
   font-family: 'Roboto-Black';
 }
 .sidetext{
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   margin: 2% 0;
 }
 .asideButton{
   align-self: baseline;
 }
 .slideshow a{
-  border-radius: 2.5%;
+  border-radius: 4.5%;
   font-family: 'Roboto-Medium';
   font-size: 0.9rem;
-  padding: 5% 7.5%;
+  padding: 5% 8.5%;
   white-space: nowrap;
+  border-bottom: 0.2rem solid #538ca9;
+}
+.slideshow a:hover{
+  background-color: var(--white);
+  color: var(--blue);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .slideshow .slideContainer:nth-child(2){
   position: relative;
@@ -464,13 +484,14 @@ header{
   width: 100vw;
 }
 #LineBreaker hr{
-  width: 5vw;
-  color: var(--black);
+  width: 3.5vw;
+  color: var(--grey);
   margin: 0;
-  border: 0.05rem solid var(--black);
+  border: 0.08rem solid var(--lightgrey);
 }
 .dotBreaker{
   margin: 0;
+  border: 0.25rem solid var(--white);
 }
 .sections aside .undertext{
   font-family: 'Roboto';
@@ -489,6 +510,9 @@ header{
   height: 320px;
   max-width: 60vw;
   margin: 0 5%;
+}
+#ListeServices{
+  margin-right: 7vw;
 }
 #ListeServices li, #ListeServices li:nth-child(2){
   background: none;
@@ -512,6 +536,28 @@ header{
   text-align: left;
   font-family: 'Roboto-Light';
   margin: 2% 0;
+}
+#ListeServices li, #ListeServices li:nth-child(2){
+  display: inline-flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.serviceDot{
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+}
+.fa-chart-line, .fa-cubes, .fa-chart-pie{
+    border: 0.1rem solid var(--lightgrey);
+    border-radius: 50%;
+    padding: 20%;
+}
+.dot{
+    position: relative;
+    left: -0.5vw;
+    margin-right: 1vw;
+    max-width: 0.5em;
 }
 
 /*Style du Portfolio*/
