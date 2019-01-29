@@ -9,6 +9,7 @@ STYLE GENERAL DE LA PAGE
   --grey: #6e6e6e;
   --lightgrey: #eaeaea;
   --blue: #5cadd3;
+  --darkblue: #468cad;
   max-width: 100vw; /* empeche tous les elements de depasser de la largeur de l'ecran */
   /* Inclus les marges et les bordures dans le calcul des dimensions */
 }
@@ -283,12 +284,6 @@ STYLE DE LA SECTION PORTFOLIO
   display: block;
   border-radius: 5%;
   padding: 1% 2%;
-}
-.menuPortfolio::after{
-  content: "";
-  background-color: var(--black);
-  width: 50%;
-  border-radius: 25%;
 }
 .menuPortfolio a{
   font-family: 'Roboto-Medium';
@@ -654,6 +649,34 @@ header{
 .menuPortfolio:hover, .menuPortfolio a:hover{
   background-color: var(--blue);
   color: var(--white);
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.menuPortfolio{
+  height: 4vh;
+  padding-bottom: 0.25rem;
+}
+.menuPortfolio:hover{
+  border-bottom: 0.25rem solid var(--darkblue);
+  padding-bottom: 0;
+}
+.menuPortfolio:hover:after{
+  display: block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  font-family: 'Font-Awesome';
+  font-weight: 900;
+  color: var(--darkblue);
+  content: '\f0d7';
+  background-color: transparent;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 .menuPortfolio a{
   color: var(--grey);
@@ -688,6 +711,10 @@ header{
 }
 .itemsLabelMask:hover{
   opacity: 100;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
 /*Style du Contact*/
