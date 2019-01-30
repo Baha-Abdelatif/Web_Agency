@@ -235,10 +235,10 @@ STYLE DE LA SECTION SERVICES
 }
 .serviceWrapper{
   max-width: 66%;
-  background-color: rgba(92, 173, 211, .9);
+  background-color: rgba(92, 173, 211, .75);
   padding: 2%;
   color: var(--white);
-  text-shadow: .5% .5% var(--black);
+  text-shadow: 0.25rem 0.25rem 0.25rem var(--darkblue);
 }
 .serviceWrapper h2{
   font-size: 1.5em;
@@ -329,6 +329,7 @@ STYLE DE LA SECTION PORTFOLIO
   bottom: 34.5vh;
   min-width: 20vw;
   min-height: 33.5vh;
+  text-transform: capitalize;
 }
 .itemsLabelMask:hover{
   opacity: 100;
@@ -343,13 +344,14 @@ STYLE DE LA SECTION PORTFOLIO
   width: 90vw;
   padding-top: 2.5%;
 }
+
 .itemsLabel h3{
   font-size: 1rem;
   text-transform: capitalize;
   margin-left: 2.5%;
 }
 .itemsLabel p{
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   margin-left: 2.5%;
   margin-bottom: -2vh;
 
