@@ -295,6 +295,9 @@ STYLE DE LA SECTION PORTFOLIO
   white-space: nowrap;
   color: var(--white);
 }
+#MenuPortfolio .sectionTitle, #MenuPortfolio .dotBreaker{
+  background-color: rgba(0,0,0, .0125);
+}
 .containerPortfolio{
   display: flex;
   flex-direction: row;
@@ -590,6 +593,7 @@ header{
 }
 .dotBreaker{
   margin: 0;
+  border-radius: 50%;
   border: 0.25rem solid var(--white);
 }
 .sections aside .undertext{
