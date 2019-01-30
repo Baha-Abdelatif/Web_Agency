@@ -273,8 +273,9 @@ STYLE DE LA SECTION PORTFOLIO
 }
 #MenuPortfolio ul{
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   flex-direction: row;
+  margin: 0 auto;
   justify-content: space-around;
   background-color: rgba(92, 173, 211, .9);
   border-radius: 2.5%;
@@ -288,12 +289,14 @@ STYLE DE LA SECTION PORTFOLIO
   display: block;
   border-radius: 5%;
   padding: 1% 2%;
+  flex-basis: 45%;
 }
 .menuPortfolio a{
   font-family: 'Roboto-Medium';
   text-transform: uppercase;
   white-space: nowrap;
   color: var(--white);
+
 }
 #MenuPortfolio .sectionTitle, #MenuPortfolio .dotBreaker{
   background-color: rgba(0,0,0, .005);
