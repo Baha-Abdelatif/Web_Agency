@@ -296,7 +296,7 @@ STYLE DE LA SECTION PORTFOLIO
   color: var(--white);
 }
 #MenuPortfolio .sectionTitle, #MenuPortfolio .dotBreaker{
-  background-color: rgba(0,0,0, .0125);
+  background-color: rgba(0,0,0, .005);
 }
 .containerPortfolio{
   display: flex;
@@ -477,14 +477,10 @@ header{
   font-size: 1rem;
   line-height: 15vh;
 }
-.menuItems:hover{
+a:hover.menuItems{
   border-top: 0.25rem solid var(--blue);
   color: var(--black);
   padding: 0;
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
 }
 
 /*Style du Slider*/
@@ -847,4 +843,3 @@ form .button input{
 FERMETURE DU MEDIA QUERIES
 -----------------------------------------------------------*/
 }
-
