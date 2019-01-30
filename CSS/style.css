@@ -19,6 +19,9 @@ body{
   width: 100%;
   font-size: 3vh;
 }
+#Content{
+  min-width: 300px;
+}
 .anchor{
   position: relative;
   top: -15vh;
@@ -75,7 +78,7 @@ a:hover.menuItems{
 STYLE GENERAL DES SECTIONS
 --------------------------------------------------------------------------------------------------------------*/
 .content{
-  margin-top: 25%;
+  margin-top: 17%;
   background-color: var(--white);
   border-radius: 3px;
   display: flex;
@@ -269,7 +272,7 @@ STYLE DE LA SECTION PORTFOLIO
 }
 #MenuPortfolio ul{
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   flex-direction: row;
   justify-content: space-around;
   background-color: rgba(92, 173, 211, .9);
@@ -299,7 +302,7 @@ STYLE DE LA SECTION PORTFOLIO
   align-items: center;
 }
 .itemsPortfolio img{
-  max-width: 90vw;
+  width: 90vw;
 }
 .itemsPortfolio{
   margin-bottom: -33vh;
@@ -316,7 +319,7 @@ STYLE DE LA SECTION PORTFOLIO
 .itemsLabelMask{
   opacity: 0;
   position: relative;
-  bottom: 34.25vh;
+  bottom: 34.5vh;
   min-width: 20vw;
   min-height: 33.5vh;
 }
@@ -325,7 +328,7 @@ STYLE DE LA SECTION PORTFOLIO
 }
 .itemsLabel{
   position: relative;
-  top: 24vh;
+  top: 23.25vh;
   background-color: rgba(0,0,0, .5);
   color: var(--white);
   font-family: 'Roboto-Medium';
@@ -349,10 +352,10 @@ STYLE DE LA SECTION PORTFOLIO
   border: 0.1rem solid var(--white);
   border-radius: 50%;
   color: var(--white);
-  padding: 5%;
+  padding: 4%;
   position: relative;
-  top: 9.25vh;
-  left: 70.75vw;
+  top: 7.25vh;
+  left: 74.75vw;
 }
 
 
