@@ -1,44 +1,48 @@
     <!DOCTYPE html>
     <html lang="fr">
     <head>
-      <meta charset="UTF-8">
-      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <title>Webagency - L'agence de tous vos projets !</title>
+      <meta name="description" content="L'agence de tous vos projets !" />
       <meta property="og:title" content="Webagency" />
       <meta property="og:description" content="L'agence de tous vos projets !" />
+      <meta property="og:type" content="website" />
       <meta property="og:url" content="https://webagency.baha-abdelatif.com/" />
       <meta property="og:site_name" content="Webagency" />
-      <meta property="og:image" content="IMG/logo.png" />
-      <title>Webagency - L'agence de tous vos projets !</title>
-      <link rel="stylesheet" href="CSS/style.css" type="text/css" />
-      <link rel="stylesheet" href="CSS/fonts.css">
+      <meta property="og:image" content="https://webagency.baha-abdelatif.com/IMG/logo.png" />
+      <meta name="twitter:card" content="summary" />
+      <meta name="twitter:site" content="@publisher_handle" />
+      <meta name="twitter:title" content="Webagency" />
+      <meta name="twitter:description" content="L'agence de tous vos projets !" />
+      <meta name="twitter:image" content="https://webagency.baha-abdelatif.com/IMG/logo.png" />
       <link rel="shortcut icon" type="image/ico" href="IMG/ico/favicon.ico"/>
+      <link rel="stylesheet" href="CSS/fonts.css">
+      <link rel="stylesheet" href="CSS/style.css" type="text/css" />
       <script defer src="https://use.fontawesome.com/releases/v5.6.3/js/all.js" integrity="sha384-EIHISlAOj4zgYieurP0SdoiBYfGJKkgWedPHH4jCzpCXLmzVsw1ouK59MuUtP4a1"
       crossorigin="anonymous"></script> <!-- CDN Fontawesome -->
     </head>
     <body>
       <header id="Topbar">
-        <div class="topbar">
           <!-- Logo de l'agence menant vers la page d'accueil -->
-          <a class="topbarItems" id="Logo" href="https://webagency.baha-abdelatif.com/" title="Webagency - L'agence de tous vos projets !">
-            <img src="IMG/logo.png" alt="logo de l'agence">
+          <a id="Logo" href="https://webagency.baha-abdelatif.com/" title="Webagency - L'agence de tous vos projets !">
+            <img src="IMG/logo.png" alt="logo de l'agence-web Webagency bleu et blanc">
           </a>
           <!-- Menu de la page -->
-          <nav id="Menu" class="topbarItems">
-            <a class="menuItems topbarItems" id="Selected" href="#SliderAnchor" title="Accueil de la page">Accueil</a>
+          <nav id="Menu">
+            <a class="menuItems" href="#SliderAnchor" title="Accueil de la page">Accueil</a>
             <a class="menuItems" href="#ServicesAnchor" title="Nos Services">Services</a>
             <a class="menuItems" href="#PortfolioAnchor" title="Tous Nos Projets">Portfolio</a>
             <a class="menuItems" href="#MapAnchor" title="Nous Contacter">Contact</a>
           </nav>
-        </div>
       </header>
       <div id="Content" class="content">
-        <div id="SliderAnchor" class="anchor"></div>
         <section class="sections" id="Slider">
+          <div id="SliderAnchor" class="anchor"></div>
           <!-- Premiere section contenant les slides -->
           <div class="slideshow">
             <!-- La DIV qui contient ma premiere slide -->
-            <div class="slideContainer">
-              <div class="slides active" id="Slide1" >
+            <div class="slides active" id="Slide1" >
                 <div id="ArrowLeft" class="arrow">
                   <i class="fas fa-angle-left"></i>
                 </div>
@@ -46,15 +50,13 @@
                   <div class="presentation">
                     <div class="asideSlide">
                       <div class="asideTitle">
-                        <h1><strong>Webagency</strong> :</h1>
-                        <p class="accroche">
-                          L'agence de tous vos projets !
-                        </p>
+                        <h1 class="accroche"><strong>Webagency</strong> : L'agence de tous vos projets !
+                        </h1>
                       </div>
                       <p class="sidetext">Vous avez un projet web ? La WebAgency vous aide à le réaliser !</p>
                     </div>
                     <div class="asideButton">
-                      <a class="button" href="#Contact" title="cliquez pour plus d'informations">
+                      <a class="button" href="#MapAnchor" title="cliquez pour plus d'informations">
                         Plus d'infos
                       </a>
                     </div>
@@ -65,8 +67,6 @@
                 </div>
               </div>
               <div class="statusBar"></div>
-            </div>
-            <div class="slideContainer">
               <div class="slides" id="Slide2">
                 <div id="ArrowLeft" class="arrow">
                   <i class="fas fa-angle-left"></i>
@@ -75,15 +75,13 @@
                   <div class="presentation">
                     <div class="asideSlide">
                       <div class="asideTitle">
-                        <h1><strong>Webagency</strong> :</h1>
-                        <p class="accroche">
-                          Demarquez vous aujourd'hui !
-                        </p>
+                        <h1 class="accroche"><strong>Webagency</strong> : Demarquez vous aujourd'hui !
+                        </h1>
                       </div>
                       <p class="sidetext">Developpez votre présence en ligne avec nos solutions adaptées !</p>
                     </div>
                     <div class="asideButton">
-                      <a class="button" href="#Contact" title="cliquez pour plus d'informations">
+                      <a class="button" href="#MapAnchor" title="cliquez pour plus d'informations">
                         Plus d'infos
                       </a>
                     </div>
@@ -93,17 +91,16 @@
                     <i class="fas fa-angle-right"></i>
                   </div>
               </div>
-            </div>
           </div>
         </section>
         <section class="sections" id="Services">
           <div id="ServicesAnchor" class="anchor"></div>
           <div class="services">
-            <aside>
+            <aside class="sectionAside">
               <h1 class="sectionTitle">NOS SERVICES</h1>
               <div id="LineBreaker">
                 <hr id="lineLeft">
-                <div class="dotBreaker"><i class="fas fa-circle"></i></div>
+                <div class="dotBreaker"></div>
                 <hr id="lineRight">
               </div>
               <p class="undertext">Profitez de toute notre expertise en matière de web-design, d'éxpèrience utilisateur et de referencement !</p>
@@ -151,11 +148,11 @@
           <div id="PortfolioAnchor" class="anchor"></div>
           <div class="wrapperPortfolio">
             <div id="MenuPortfolio" class="containerPortfolio">
-              <aside>
+              <aside class="sectionAside">
                 <h1 class="sectionTitle">NOS PROJETS</h1>
                 <div id="LineBreaker">
                   <hr id="lineLeft">
-                  <div class="dotBreaker"><i class="fas fa-circle"></i></div>
+                  <div class="dotBreaker"></div>
                   <hr id="lineRight">
                 </div>
                 <p class="undertext">Retrouvez toutes nos dernieres creations ici</p>
@@ -165,7 +162,7 @@
                   <input type="radio" id="r3" name="R">
                   <input type="radio" id="r4" name="R">
                   <li id="AllWorks" class="menuPortfolio">
-                    <a href="#">
+                    <a href="#" class="selected">
                       <label for="r1" id="l1">
                         All Works
                       </label>
@@ -199,10 +196,10 @@
               <div class="containerPortfolio">
                 <div class="itemsPortfolio allWorks creative">
                   <img src="IMG/portfolio/resized/01.jpg" alt="">
-                  <div class="itemsLabelMask">
+                  <div class="itemsLabelMask selected">
                     <div class="itemsLabel">
                       <h3>Carnaval</h3>
-                      <p>Une boutique de masque pour faire la fête !</p>
+                      <p>Une boutique de masques pour faire la fête !</p>
                     </div>
                     <i class="far fa-eye"></i>
                   </div>
@@ -293,7 +290,7 @@
               <h1 class="sectionTitle formElements">Contact Info</h1>
               <div id="LineBreaker">
                 <hr id="lineLeft">
-                <div class="dotBreaker"><i class="fas fa-circle"></i></div>
+                <div class="dotBreaker"></div>
                 <hr id="lineRight">
               </div>
               <h2 class="formElements undertext">WebAgency SAS</h2>
