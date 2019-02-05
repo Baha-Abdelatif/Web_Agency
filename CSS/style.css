@@ -22,20 +22,20 @@ body{
 STYLE DE LA PARTIE EN TETE DU SITE
 --------------------------------------------------------------------------------------------------------------*/
 header{
-  position: fixed; /* fixe le header en haut de la page */
-  top: 0; /* haut de la topbar positionné a 0 par rapport au haut du document*/
-  left: 0; /* gauche de la topbar positionnée a 0 par rapport a la gauche du document*/
-  right: 0; /* droite de la topbar positionnée a 0 par rapport a la droite du document */
   width: 100vw; /* la largeur de la topbar prend tout l'espace disponible */
   background-color: var(--white); /* donne une couleur de fond au header */
-  z-index: 10; /* Place le header au dessus de tout les autres elements */
 }
 #Topbar{
+  padding-top: 1%;
   display: flex; /* donne la propriété "Flex" au container "topbar" contenant le header*/
   flex-direction: column; /* fixe l'axe principal de la topbar sur l'axe vertical */
   align-items: center; /*aligne les objets de la topbar sur son axe secondaire (horizontal)*/
   max-height: 75px; /* empeche la topbar de prendre plus de 5% de la hauteur totale */
-  margin-top: 1%; /* marge exterieure superieure de la topbar fixée a 1% */
+  position: fixed; /* fixe le header en haut de la page */
+  top: 0; /* haut de la topbar positionné a 0 par rapport au haut du document*/
+  left: 0; /* gauche de la topbar positionnée a 0 par rapport a la gauche du document*/
+  right: 0; /* droite de la topbar positionnée a 0 par rapport a la droite du document */
+  z-index: 10; /* Place le header au dessus de tout les autres elements */
 }
 #Logo img{
   margin-top: 3%; /* defini l'espace entre l'image du logo et le haut de la page */
@@ -100,8 +100,8 @@ STYLE GENERAL DES SECTIONS
 }
 .dotBreaker{
   background-color: var(--blue); /* Defini la couleur de fond du cercle du titre des sections */
-  width: 10vw; /* Oblige le cercle a prendre 7% de la largeur disponible */
-  height: 10vw;/* Oblige le cercle a prendre 7% de la hauteur disponible */
+  width: 35px; /* Oblige le cercle a prendre 7% de la largeur disponible */
+  height: 35px;/* Oblige le cercle a prendre 7% de la hauteur disponible */
   margin: auto; /* Centre le cercle par rapport a son conteneur */
   border: 7px solid var(--white); /* Donne une bordure blanche au cercle */
   border-radius: 50%; /* Donne un arrondi aux bordures du cercle */
@@ -296,7 +296,7 @@ STYLE DE LA SECTION PORTFOLIO
   display: flex; /* donne au masque la proprieté flex */
   align-items: flex-end; /* aligne les elements a la fin de l'axe secondaire */
 }
-.itemsLabelMask:hover, .itemsLabelMask.selected{
+.itemsLabelMask:active, .itemsLabelMask.selected{
   opacity: 1; /* affiche le masque lors du survol de la souris */
 }
 .itemsLabel{
