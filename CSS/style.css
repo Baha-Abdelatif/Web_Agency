@@ -21,11 +21,9 @@ body{
 /*--------------------------------------------------------------------------------------------------------------
 STYLE DE LA PARTIE EN TETE DU SITE
 --------------------------------------------------------------------------------------------------------------*/
-header{
+#Topbar{
   width: 100vw; /* la largeur de la topbar prend tout l'espace disponible */
   background-color: var(--white); /* donne une couleur de fond au header */
-}
-#Topbar{
   padding-top: 1%;
   display: flex; /* donne la propriété "Flex" au container "topbar" contenant le header*/
   flex-direction: column; /* fixe l'axe principal de la topbar sur l'axe vertical */
@@ -377,12 +375,72 @@ form p textarea{
 }
 
 /*--------------------------------------------------------------------------------------------------------------
-STYLE POUR ECRANS LARGES POUR ECRANS MOYENS
+STYLE POUR ECRANS MOYENS
 --------------------------------------------------------------------------------------------------------------*/
-@media screen and (min-width: 768px) and (max-width: 1024px){
+@media screen and (min-width: 480px) and (max-width: 1024px){
 
+/* Style general */
+.anchor{
+  top: -60px;
+}
+#Content{
+  margin-top: 70px;
+}
+p.undertext{
+  max-width: 75%;
+}
 
+/* Style du header */
+#Topbar{
+  flex-direction: row;
+  justify-content: space-around;
+}
+#Menu{
+  border: none;
+}
 
+/*Style du Slider*/
+.slides{
+  min-height: 225px;
+}
+.slides aside{
+  max-width: 55%;
+}
+.presentation{
+  margin: 5%;
+  justify-content: flex-start;
+}
+.asideButton{
+  align-self: flex-start;
+}
+
+/*Style des Services*/
+.serviceWrapper{
+  width: 55%;
+  min-height: 150px;
+}
+.menuPortfolio{
+  margin: 1% 2.5%;
+}
+#BoxedPortfolio{
+  margin-top: 1%;
+}
+.containerPortfolio{
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.itemsPortfolio{
+  width: 45%;
+  margin: 2.5%;
+}
+.itemsPortfolio img{
+  max-width: 100%;
+}
+/*Style du Portfolio*/
+#MenuPortfolio ul{
+  width: 90%;
+  margin: 0 auto;
+}
 /*----------------------------------------------------------
 FERMETURE DU MEDIA QUERIES POUR ECRANS MOYENS
 -----------------------------------------------------------*/
@@ -400,172 +458,197 @@ STYLE POUR ECRANS LARGES
   border: none;
 }
 #Content{
-  margin-top: 7%;
+  margin-top: 100px;
 }
 .sections{
-  min-height: 15vh;
+  min-height: 240px;
 }
 .sectionTitle{
   color: var(--black);
-}
-
-/* Style du header */
-header{
-  position: fixed; /* L'attribut 'fixed' maintiens la barre de menu a la position fixée lors du scroll*/
-  z-index: 10;
-  top: 0;
-  left: 0;
-  right: 0;
-  background-color: var(--white); /*J'appelle ma variable de couleur blanche*/
-  font-family: 'Roboto-Bold', sans-serif;
-  max-width: 100vw;
-  min-height: 15vh;
-  flex-direction: row;
-  justify-content: space-between;
-}
-#Logo{
-  margin-left: 10vw;
-}
-#Logo img{
-  margin: 0;
-  max-height: none;
-}
-#Menu{
-  border: none;
-  margin-right: 15vw;
-}
-.menuItems{
-  padding: 0;
-  padding-top: 0.25em;
-  margin: 0 5%;
-  font-size: 1em;
-  line-height: 15vh;
-}
-a:hover.menuItems{
-  border-top: 0.25em solid var(--blue);
-  color: var(--black);
-  padding: 0;
-}
-
-/*Style du Slider*/
-.slideshow{
-  height: 80vh;
-}
-.slides{
-  min-height: 75vh;
-  display: inline-flex;
-  width: 99vw;
-  align-items: center;
-  justify-content: space-between;
-}
-.arrow{
-  display: inline-block;
-  position: relative;
-  background-color: rgba(0,0,0,.5);
-  color: var(--white);
-  font-size: 2em;
-  max-height: 1em;
-  padding: 1.5em;
-  border-radius: 50%;
-}
-.arrow:hover{
-  background-color: rgba(255,255,255,.5);
-  color: var(--black);
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-#ArrowLeft{
-  left: -1.5em;
-}
-#ArrowRight{
-  right: -1.5em;
-}
-.arrow svg{
-  position: relative;
-  top: -0.5em;
-}
-.slides aside{
-  background-color: transparent;
-  max-width: 40vw;
-  margin: 10% 0% 10% 11%;
-  position: relative;
-  left: -24vw;
-}
-.presentation{
-  position: static;
-  font-family: 'Roboto-Black';
-  font-size: 1.2em;
-  line-height: 1.5em;
-  color: var(--white);
-  justify-content: flex-start;
-}
-.asideTitle h1, .asideTitle p{
-  display: inline;
-  font-size: 2em;
-  font-family: 'Roboto-Black';
-}
-.sidetext{
-  font-size: 0.8em;
-  margin: 2% 0;
-}
-.asideButton{
-  align-self: baseline;
-}
-.slideshow a{
-  border-radius: 4.5%;
-  font-family: 'Roboto-Medium';
-  font-size: 0.9em;
-  padding: 5% 8.5%;
-  white-space: nowrap;
-  border-bottom: 0.2em solid #538ca9;
-}
-.slideshow a:hover{
-  background-color: var(--white);
-  color: var(--blue);
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-.slideshow .slideContainer:nth-child(2){
-  position: relative;
-  left: -200%;
-}
-.statusBar{
-  height: 0.5vh;
-  width: 10vw;
-  background-color: var(--blue);
-  position: relative;
-  top: -0.5vh;
-}
-
-/*Style des Services*/
-#Services aside{
-  width: 100vw;
+  font-size: 2.5rem;
 }
 #LineBreaker hr{
-  width: 4.5vw;
-  color: var(--grey);
+  width: 4.5%;
+  height: 1px;
+  background-color: var(--lightgrey);
   margin: 0;
-  border: 0.07em solid var(--lightgrey);
 }
 .dotBreaker{
   margin: 0;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
   border: 0.25em solid var(--white);
 }
 .sections aside .undertext{
   font-family: 'Roboto';
   font-size: 1em;
-  padding: 1.5% 1%;
+  padding: 1%;
   text-transform: initial;
+}
+.anchor{
+  top: -100px;
+}
+/* Style du header */
+#Topbar{
+  position: fixed; /* L'attribut 'fixed' maintiens la barre de menu a la position fixée lors du scroll*/
+  z-index: 10;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: var(--white); /*appelle la variable de couleur blanche*/
+  font-family: 'Roboto-Bold', sans-serif;
+  max-height: 100px;
+  max-width: 100vw;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 2% 1%;
+}
+#Logo{
+  margin-left: 7vw;
+}
+#Logo img{
+  margin: 0;
+  max-height: none;
+}
+#Menu{
+  border-top: none;
+  margin-right: 7vw;
+}
+.menuItems{
+  font-family: 'Roboto-Medium';
+  color: var(--grey);
+  padding: 0 15px;
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 100px;
+  padding-top: 9px;
+}
+a:hover.menuItems{
+  border-top: 9px solid var(--blue);
+  color: var(--black);
+  padding: 0 15px;
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+/*Style du Slider*/
+.slideshow{
+  height: 80%;
+}
+.slides{
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  min-height: 570px;
+}
+.arrow{
+  display: inline-block;
+  position: absolute;
+  background-color: rgba(0,0,0,.5);
+  color: var(--white);
+  font-weight: lighter;
+  line-height: 35px;
+  font-size: 35px;
+  max-height: 75px;
+  padding: 2.5px 7.5px;
+  border-radius: 50%;
+}
+.arrow:hover{
+  background-color: rgba(255,255,255,.5);
+  color: var(--black);
+  -webkit-transition-property: color, background-color;
+  transition-property: color, background-color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  cursor: pointer;
+}
+#ArrowLeft{
+  text-align: right;
+  left: -17px;
+}
+#ArrowRight{
+  text-align: left;
+  right: -3px;
+}
+.arrow svg{
+  margin: 10px;
+}
+.slides aside{
+  background-color: transparent;
+  max-width: 45%;
+  margin: 4% 0% 0% 7%;
+  position: absolute;
+}
+.presentation{
+  font-family: 'Roboto-Medium';
+  font-size: 0.9rem;
+  color: var(--white);
+  text-shadow: none;
+  justify-content: flex-start;
+}
+.asideTitle h1{
+  display: inline;
+  font-size: 2.25rem;
+  font-family: 'Roboto-Black';
+}
+.accroche strong{
+  font-size: 2.25rem;
+  font-family: 'Roboto-Black';
+}
+.sidetext{
+  margin: 2% 0;
+}
+.asideButton{
+  align-self: baseline;
+  position: relative;
+  top: -60px;
+}
+.slideshow a{
+  border-radius: 4.5%;
+  font-family: 'Roboto-Black';
+  font-size: 1.2rem;
+  text-shadow: none;
+  padding: 7.5% 12%;
+  white-space: nowrap;
+  border-bottom: 0.2em solid #538ca9;
+}
+.slideshow a:hover{
+  background-color: var(--white);
+  color: var(--blue);
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+#Slide2{
+  position: absolute;
+  left: -200%;
+}
+.statusBar{
+  width: 100%;
+  background-color: var(--lightgrey);
+  position: relative;
+  top: -7px;
+}
+.bar{
+  background-color: var(--blue);
+  width: 10%;
+  height: 3px;
+}
+
+/*Style des Services*/
+#Services aside{
+  width: 100vw;
 }
 #ServicesContainer{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-bottom: 7.5%;
 }
 #Feature{
   display: block;
@@ -575,13 +658,15 @@ a:hover.menuItems{
   margin: 0 5%;
 }
 #ListeServices{
-  margin-right: 7vw;
+  margin-right: 7%;
 }
 #ListeServices li, #ListeServices li:nth-child(2){
   background: none;
   justify-content: center;
 }
 .serviceWrapper{
+  margin-top: 10%;
+  margin-bottom: -7.5%;
   background-color: transparent;
   color: var(--black);
   text-shadow: none;
@@ -610,47 +695,60 @@ a:hover.menuItems{
   color: var(--blue);
   display: flex;
   align-items: center;
+  width: 50px;
+  height: 50px;
+  margin: 35px;
+  position: relative;
+  top: 45px;
 }
 .fa-chart-line, .fa-cubes, .fa-chart-pie{
     border: 0.1em solid var(--lightgrey);
     border-radius: 50%;
-    padding: 20%;
+    min-height: 65px;
+    min-width: 65px;
+    padding: 15px;
 }
 .dot{
     position: relative;
-    left: -0.5vw;
-    margin-right: 1vw;
-    max-width: 0.5em;
+    left: -7px;
+    max-width: 0.75em;
 }
 
 /*Style du Portfolio*/
+#Portfolio, #Portfolio .sectionTitle{
+  background-color: #f5f5f5;
+}
 #MenuPortfolio ul{
   background-color: var(--lightgrey);
   flex-wrap: nowrap;
-  justify-content: space-between;
+  width: 30%;
+  margin: 0 auto;
+  border-radius: 7px;
 }
-.menuPortfolio:hover, .menuPortfolio a:hover{
-  background-color: var(--blue);
+.menuPortfolio:hover a, .menuPortfolio.selected a{
   color: var(--white);
-  -webkit-transition-property: all;
-  transition-property: all;
+}
+.menuPortfolio{
+  padding: 10px 0;
+  padding-bottom: 10px;
+  flex-basis: 25%;
+}
+.menuPortfolio:hover, .menuPortfolio.selected{
+  border-bottom: 5px solid var(--darkblue);
+  padding-bottom: 0;
+  background-color: var(--blue);
+  -webkit-transition-property: background-color, color;
+  transition-property: background-color, color;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
 }
-.menuPortfolio{
-  height: 4vh;
-  padding-bottom: 0.25em;
-}
-.menuPortfolio:hover{
-  border-bottom: 0.25em solid var(--darkblue);
-  padding-bottom: 0;
-}
-.menuPortfolio:hover:after{
+.menuPortfolio:hover:after, .menuPortfolio.selected:after{
   display: block;
+  position: relative;
+  top: 15px;
   font-style: normal;
   font-variant: normal;
-  line-height: 1.25em;
-  font-size: 1.75em;
+  font-size: 15px;
   text-rendering: auto;
   -webkit-font-smoothing: antialiased;
   font-family: 'Font-Awesome';
@@ -669,8 +767,10 @@ a:hover.menuItems{
   text-transform: capitalize;
 }
 .containerPortfolio{
-  margin: 0 2%;
+  margin: 0 3.75%;
   justify-content: space-evenly;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .itemsPortfolio{
   max-height: 30vh;
@@ -680,17 +780,23 @@ a:hover.menuItems{
   max-width: 20vw;
 }
 .itemsLabel{
-  max-width: 20vw;
-  top: 18vh;
+  background-color: rgba(0,0,0, .5);
+  min-width: 100%;
+  min-height: 30%;
+  margin: 0;
+  padding: 1% 2%;
 }
 .fa-eye{
-  left: 15.5vw;
-  top: 5.75vh;
+  top: 60%;
+  min-width: 35px;
+  height: 35px;
+  padding: 9px;
+  font-size: 5px;
 }
 .itemsLabelMask{
-  top: -27.7vh;
-  min-width: 20vw;
+  padding: 0;
   min-height: 27.25vh;
+  background-color: transparent;
 }
 .itemsLabelMask:hover{
   opacity: 1;
@@ -703,6 +809,8 @@ a:hover.menuItems{
 /*Style du Contact*/
 #Contact{
   height: 80vh;
+  display: block;
+  position: relative;
 }
 .mapMask{
   background-color: var(--darkblue);
@@ -725,13 +833,13 @@ a:hover.menuItems{
   display: none;
 }
 #Contact fieldset{
+  position: absolute;
+  top: -50%;
+  right: 50%;
   max-width: 30vw;
-  position: relative;
-  top: -75vh;
-  right: -30vw;
   background-color: rgba(240,240,255,.75);
   padding: 2% 1%;
-  height: 63vh;
+  height: 100%;
 }
 #Contact fieldset form{
   background-color: transparent;
