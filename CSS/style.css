@@ -167,9 +167,10 @@ STYLE DU SLIDER
 .accroche{
   font-family: 'Roboto-Italic'; /* Titre de la slide en italique */
   text-transform: uppercase; /* Titre de la slide en majuscules */
+  font-size: 1.25rem;
 }
 .accroche strong{
-  font-size: 1.5em; /* Fixe la taille de la police*/
+  font-size: 1.5rem; /* Fixe la taille de la police*/
   color: var(--blue); /* Couleur du nom de l'agence en bleu */
   font-family: 'Roboto-Bold'; /* police du nom de l'agence */
 }
@@ -375,7 +376,7 @@ form p textarea{
 }
 
 /*--------------------------------------------------------------------------------------------------------------
-STYLE POUR ECRANS MOYENS
+STYLE POUR TABLETTES
 --------------------------------------------------------------------------------------------------------------*/
 @media screen and (min-width: 480px) and (max-width: 1024px){
 
@@ -442,14 +443,14 @@ p.undertext{
   margin: 0 auto;
 }
 /*----------------------------------------------------------
-FERMETURE DU MEDIA QUERIES POUR ECRANS MOYENS
+FERMETURE DU MEDIA QUERIES POUR TABLETTES
 -----------------------------------------------------------*/
 }
 
 /*--------------------------------------------------------------------------------------------------------------
-STYLE POUR ECRANS LARGES
+STYLE POUR ECRANS DESKTOP
 --------------------------------------------------------------------------------------------------------------*/
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1024px){
 
 /*Style general*/
 *{
@@ -926,6 +927,30 @@ form .button input:hover{
 }
 
 /*----------------------------------------------------------
-FERMETURE DU MEDIA QUERIES
+FERMETURE DU MEDIA QUERIES DESKTOP
+-----------------------------------------------------------*/
+}
+
+/*--------------------------------------------------------------------------------------------------------------
+STYLE POUR ECRANS XXL
+--------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 1720px){
+
+#ServicesContainer{
+  margin: 2.5% 5%;
+}
+#ListeServices{
+  margin-right: 2.5%;
+}
+
+#ListeServices li{
+  display: flex;
+}
+.itemsPortfolio{
+  flex-basis: 20%;
+}
+
+/*----------------------------------------------------------
+FERMETURE DU MEDIA QUERIES XXL
 -----------------------------------------------------------*/
 }
