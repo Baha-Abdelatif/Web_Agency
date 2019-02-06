@@ -773,7 +773,7 @@ a:hover.menuItems{
   flex-wrap: wrap;
 }
 .itemsPortfolio{
-  max-height: 30vh;
+  width: auto;
   margin: 1.5%
 }
 .itemsPortfolio img{
