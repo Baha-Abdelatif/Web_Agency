@@ -74,7 +74,7 @@ STYLE GENERAL DES SECTIONS
   position: relative; /* Decale les ancres de la page */
   top: -80px; /* de 75px vers le bas */
 }
-#LineBreaker{
+.lineBreaker{
   display: flex; /* Donne la propriété flex au conteneur du separateur */
   flex-wrap: nowrap; /* Empeche le retour a la ligne */
   justify-content: center; /* Aligne les objets sur l'axe principal*/
@@ -90,7 +90,7 @@ STYLE GENERAL DES SECTIONS
   text-transform: uppercase; /* Met le titre en majuscule */
   color: var(--black); /* Defini la couleur du texte des sections */
 }
-#LineBreaker hr{
+.lineBreaker hr{
   width: 20vw; /* Oblige les separateurs a prendre 20% de l'espace disponible*/
   height: 2px; /* Oblige les separateurs a prendre 1px de hauteur */
   background-color: var(--black); /* Defini la couleur de fond des separateur */
@@ -275,9 +275,6 @@ STYLE DE LA SECTION PORTFOLIO
   flex-direction: column; /* organise les elements en colonne */
   justify-content: space-around; /* espace les elements */
   align-items: center; /* Aligne les elements sur l'axe secondaire */
-}
-#r1, #r2, #r3, #r4{
-  display: none; /* masque les boutons radio du menu portfolio */
 }
 .itemsPortfolio{
   margin-top: 1%; /* defini la marge superieure */
@@ -468,7 +465,7 @@ STYLE POUR ECRANS DESKTOP
   color: var(--black);
   font-size: 2.5rem;
 }
-#LineBreaker hr{
+.lineBreaker hr{
   width: 4.5%;
   height: 1px;
   background-color: var(--lightgrey);
@@ -567,11 +564,11 @@ a:hover.menuItems{
   transition-duration: 0.3s;
   cursor: pointer;
 }
-#ArrowLeft{
+.arrowLeft{
   text-align: right;
   left: -17px;
 }
-#ArrowRight{
+.arrowRight{
   text-align: left;
   right: -3px;
 }
@@ -830,7 +827,7 @@ a:hover.menuItems{
 #ContactInfos{
   margin-bottom: 3%;
 }
-#ContactInfos #LineBreaker{
+#ContactInfos .lineBreaker{
   display: none;
 }
 #Contact fieldset{
