@@ -733,6 +733,7 @@ a:hover.menuItems{
   padding: 10px 0;
   padding-bottom: 10px;
   flex-basis: 25%;
+  line-height: 0.75rem;
 }
 .menuPortfolio:hover, .menuPortfolio.selected{
   border-bottom: 5px solid var(--darkblue);
@@ -746,7 +747,7 @@ a:hover.menuItems{
 .menuPortfolio:hover:after, .menuPortfolio.selected:after{
   display: block;
   position: relative;
-  top: 15px;
+  top: 14px;
   font-style: normal;
   font-variant: normal;
   font-size: 15px;
