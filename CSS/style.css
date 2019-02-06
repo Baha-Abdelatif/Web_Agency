@@ -834,11 +834,11 @@ a:hover.menuItems{
 #Contact fieldset{
   position: absolute;
   top: 6%;
-  right: 6%;
-  max-width: 26%;
+  right: 9%;
+  max-width: 22.5%;
   background-color: rgba(240,240,255,.75);
   padding: 2% 1%;
-  height: 90%;
+  height: 88%;
 }
 #Contact fieldset form{
   background-color: transparent;
