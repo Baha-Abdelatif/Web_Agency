@@ -289,7 +289,7 @@ STYLE DE LA SECTION PORTFOLIO
   display: flex; /* donne au masque la proprieté flex */
   align-items: flex-end; /* aligne les elements a la fin de l'axe secondaire */
 }
-.itemsLabelMask:hover, .itemsLabelMask.selected{
+.itemsLabelMask:hover{
   opacity: 1; /* affiche le masque lors du survol de la souris */
 }
 .itemsLabel{
