@@ -183,7 +183,6 @@ STYLE DU SLIDER
   background-color: var(--blue); /* couleur de fond en bleu */
   border-radius: 5%; /* donne un arrondi aux coins du bouton */
   padding: .25em .5em; /* Marge interieure fixée a 25% et 50% de la police de l'element */
-  align-self: flex-end; /* place le bouton a la fin de l'espace disponible */
   margin: 5% auto; /* marge exterieure du bas fixée a 6% */
   text-shadow: 0.25em 0.25em 0.25em var(--darkblue); /* Donne une ombre au texte pour ameliorer la lisibilité */
 }
