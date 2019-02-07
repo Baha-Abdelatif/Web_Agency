@@ -219,7 +219,7 @@ STYLE DE LA SECTION SERVICES
   color: var(--white); /* couleur de la police */
   text-shadow: 0.25em 0.25em 0.25em var(--darkblue); /* ajoute une ombre au texte pour ameliorer la lisibilité */
 }
-.serviceWrapper h2{
+.serviceWrapper h3{
   font-size: 1.5em; /* Fixe la taille de la police*/
   text-transform: uppercase; /* Titre en majuscules */
   text-align: center; /* centre le texte */
@@ -585,7 +585,7 @@ a:hover.menuItems{
   text-shadow: none;
   justify-content: flex-start;
 }
-.asideTitle h1{
+.accroche{
   display: inline;
   font-size: 2.25rem;
   font-family: 'Roboto-Black';
@@ -633,6 +633,9 @@ a:hover.menuItems{
 }
 
 /*Style des Services*/
+#Services{
+  margin-bottom: 10%;
+}
 #Services aside{
   width: 100vw;
 }
@@ -640,7 +643,6 @@ a:hover.menuItems{
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  margin-bottom: 7.5%;
 }
 #Feature{
   display: block;
@@ -663,7 +665,7 @@ a:hover.menuItems{
   color: var(--black);
   text-shadow: none;
 }
-.serviceWrapper h2{
+.serviceWrapper h3{
   font-size: 1.2em;
   text-transform: initial;
   text-align: left;
@@ -767,7 +769,7 @@ a:hover.menuItems{
 }
 .itemsPortfolio{
   width: auto;
-  margin: 1.5%
+  margin: 1%;
 }
 .itemsPortfolio img{
   max-width: 20vw;
@@ -788,7 +790,6 @@ a:hover.menuItems{
 }
 .itemsLabelMask{
   padding: 0;
-  min-height: 27.25vh;
   background-color: transparent;
 }
 .itemsLabelMask:hover{
@@ -831,7 +832,6 @@ a:hover.menuItems{
   max-width: 22.5%;
   background-color: rgba(240,240,255,.75);
   padding: 2% 1%;
-  height: 88%;
 }
 #Contact fieldset form{
   background-color: transparent;
@@ -843,7 +843,7 @@ a:hover.menuItems{
   border: 0.5px solid var(--grey);
   border-radius: 2.75%;
 }
-#ContactInfos h1{
+#ContactInfos h2{
   font-size: 1.5em;
   text-align: left;
   background-color: transparent;
@@ -852,7 +852,7 @@ a:hover.menuItems{
   font-family: 'Roboto-Black';
   font-weight: bold;
 }
-#ContactInfos p, #ContactInfos h2{
+#ContactInfos p, #ContactInfos h3{
   font-family: 'Roboto-Medium';
   font-size: 0.9em;
   text-align: left;
@@ -927,7 +927,13 @@ FERMETURE DU MEDIA QUERIES DESKTOP
 STYLE POUR ECRANS XXL
 --------------------------------------------------------------------------------------------------------------*/
 @media screen and (min-width: 1720px){
-
+.anchor{
+  top: -120px;
+}
+#Content{
+  margin: .25%;
+  max-width: 100%;
+}
 #ServicesContainer{
   margin: 2.5% 5%;
 }
@@ -941,7 +947,12 @@ STYLE POUR ECRANS XXL
 .itemsPortfolio{
   flex-basis: 20%;
 }
-
+.mapMask, #Map iframe {
+  min-height: 635px;
+}
+.itemsLabelMask{
+  width: 73%;
+}
 /*----------------------------------------------------------
 FERMETURE DU MEDIA QUERIES XXL
 -----------------------------------------------------------*/
