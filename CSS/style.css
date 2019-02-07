@@ -934,6 +934,9 @@ STYLE POUR ECRANS XXL
   margin: .25%;
   max-width: 100%;
 }
+.slideshow a{
+  min-width: unset;
+}
 #ServicesContainer{
   margin: 2.5% 5%;
 }
