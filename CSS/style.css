@@ -1,380 +1,383 @@
-/*--------------------------------------------------------------------------------------------------------------
+/*--------------------------------------------------------------------
 STYLE GENERAL DE LA PAGE
---------------------------------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------*/
 *{
-  margin: 0; /* Supression des styles automatiques du navigateur */
-  padding: 0; /* marges interieures et exterieures initialisées a 0 */
-  --black: #3d3d3d; /* Declaration des couleurs globales du document */
-  --white: #fcfcfc; /* permet de les rappeller plus facilement */
+  margin: 0;
+  padding: 0;
+  --black: #3d3d3d; /* Declaration d'une variable pour la couleur */
+  --white: #fcfcfc;
   --grey: #6e6e6e;
   --lightgrey: #eaeaea;
   --blue: #5cadd3;
   --darkblue: #468cad;
-  max-width: 100vw; /* empeche tous les elements de depasser de la largeur de l'ecran */
-  box-sizing: border-box; /*Inclus les marges et les bordures dans le calcul des dimensions */
+  max-width: 100vw;
+  box-sizing: border-box; /* prend en compte les marges et bordures dans le dimensionnement des elements */
 }
 body{
-  font-family: 'Roboto', sans-serif; /* Definit 'Roboto' comme police generale du document */
-  overflow-x: hidden; /* Masque la barre de scroll horizontal */
+  font-family: 'Roboto', sans-serif;
+  overflow-x: hidden; /* masque la barre de defilement vertical */
 }
-
-/*--------------------------------------------------------------------------------------------------------------
+strong{
+  font-weight: normal;
+}
+/*---------------------------------------------------------------------
 STYLE DE LA PARTIE EN TETE DU SITE
---------------------------------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------*/
 #Topbar{
-  width: 100vw; /* la largeur de la topbar prend tout l'espace disponible */
-  background-color: var(--white); /* donne une couleur de fond au header */
+  width: 100vw; /* Fixe la largeur de la Topbar a 100% de la largeur visible */
+  background-color: var(--white);
   padding-top: 1%;
-  display: flex; /* donne la propriété "Flex" au container "topbar" contenant le header*/
-  flex-direction: column; /* fixe l'axe principal de la topbar sur l'axe vertical */
-  align-items: center; /*aligne les objets de la topbar sur son axe secondaire (horizontal)*/
-  max-height: 75px; /* empeche la topbar de prendre plus de 5% de la hauteur totale */
-  position: fixed; /* fixe le header en haut de la page */
-  top: 0; /* haut de la topbar positionné a 0 par rapport au haut du document*/
-  left: 0; /* gauche de la topbar positionnée a 0 par rapport a la gauche du document*/
-  right: 0; /* droite de la topbar positionnée a 0 par rapport a la droite du document */
-  z-index: 10; /* Place le header au dessus de tout les autres elements */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 75px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 10; /* element avec le Z-index le plus fort = element positionné au dessus */
 }
 #Logo img{
-  margin-top: 3%; /* defini l'espace entre l'image du logo et le haut de la page */
-  max-height: 35px; /* empeche l'image du logo de prendre plus de 5% de la hauteur visible */
+  margin-top: 3%;
+  max-height: 35px;
 }
 #Menu{
-  display: inline-flex; /* fixe la propriété flex sur inline pour placer les elements du menu */
-  justify-content: center; /* aligne les objets sur l'axe principal (horizontal) */
-  align-items: baseline; /* aligne les objets sur l'axe secondaire */
-  border-top: solid 2px var(--blue); /* Donne une bordure decorative au dessus du menu */
+  display: inline-flex;
+  justify-content: center;
+  align-items: baseline;
+  border-top: solid 2px var(--blue);
 }
 .menuItems{
-  padding-top: 1%; /* defini la marge interieure superieure */
-  margin: 1% 2%; /* defini les marges exterieures */
-  color: var(--grey); /* defini la couleur du texte */
-  text-decoration: none; /* retire la decoration par defaut par defaut appliquée aux liens par le browser */
-  font-size: 1em; /* donne une taille relative a la police d'ecriture */
-  line-height: 1.2em; /* defini la hauteur de ligne */
+  padding-top: 1%;
+  margin: 1% 2%;
+  color: var(--grey);
+  text-decoration: none;
+  font-size: 1em;
+  line-height: 1.2em;
 }
 a:hover.menuItems{
-  color: var(--blue); /* modifie la couleur du lien du menu lors du survol avec la souris */
-  font-family: 'Roboto-Black'; /* modifie la police utilisée lors du survol */
-  -webkit-transition-property: all; /* Compatibilité avec les navigateurs */
-  transition-property: all; /* Defini les elements sur lesquels la transition s'applique */
-  -webkit-transition-duration: 0.3s; /* Compatibilité avec les navigateurs  */
-  transition-duration: 0.3s; /* Defini la durée de la transition */
+  color: var(--blue);
+  font-family: 'Roboto-Black';
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
 }
 
-/*--------------------------------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------
 STYLE GENERAL DES SECTIONS
---------------------------------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------*/
 #Content{
-  background-color: var(--white);  /* Fond du contenu de la page */
-  margin-top: 80px; /* Donne une marge de 80px en haut pour separer du header */
-  min-width: 300px; /* Empeche le contenu de la page de descendre sous les 300px */
+  background-color: var(--white);
+  margin-top: 80px;
+  min-width: 300px;
 }
 .anchor{
-  position: relative; /* Decale les ancres de la page */
-  top: -80px; /* de 75px vers le bas */
+  position: relative;
+  top: -80px;
 }
 .lineBreaker{
-  display: flex; /* Donne la propriété flex au conteneur du separateur */
-  flex-wrap: nowrap; /* Empeche le retour a la ligne */
-  justify-content: center; /* Aligne les objets sur l'axe principal*/
-  align-items: center; /* Aligne les objets sur l'axe secondaire */
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
 }
 .sections{
-  width: 100vw; /* force les sections a occuper 100% de la largeur de la vue */
-  margin-top: 2.5%; /* donne une marge exterieure de 2.5% en haut des sections */
+  width: 100vw;
+  margin-top: 2.5%;
 }
 .sectionAside{
-  width: 100vw; /* Oblige le titre des sections a prendre toute la largeur de l'ecran */
-  text-align: center; /* Centre les elements textuels dans l'en tete des sections */
-  text-transform: uppercase; /* Met le titre en majuscule */
-  color: var(--black); /* Defini la couleur du texte des sections */
+  width: 100vw;
+  text-align: center;
+  text-transform: uppercase;
+  color: var(--black);
 }
 .lineBreaker hr{
-  width: 20vw; /* Oblige les separateurs a prendre 20% de l'espace disponible*/
-  height: 2px; /* Oblige les separateurs a prendre 1px de hauteur */
-  background-color: var(--black); /* Defini la couleur de fond des separateur */
-  margin: auto; /* Centre les separateurs par rapport a leur conteneur */
+  width: 20vw;
+  height: 2px;
+  background-color: var(--black);
+  margin: auto;
 }
 .dotBreaker{
-  background-color: var(--blue); /* Defini la couleur de fond du cercle du titre des sections */
-  width: 35px; /* Oblige le cercle a prendre 7% de la largeur disponible */
-  height: 35px;/* Oblige le cercle a prendre 7% de la hauteur disponible */
-  margin: auto; /* Centre le cercle par rapport a son conteneur */
-  border: 7px solid var(--white); /* Donne une bordure blanche au cercle */
-  border-radius: 50%; /* Donne un arrondi aux bordures du cercle */
+  background-color: var(--blue);
+  width: 35px;
+  height: 35px;
+  margin: auto;
+  border: 7px solid var(--white);
+  border-radius: 50%;
 }
 .sections aside .undertext{
-  font-family: 'Roboto-Medium'; /* Defini la police de la description des sections */
-  margin: 0 auto; /* Centre verticalement la description des sections */
-  padding: 0.5% 1%; /* Marge interieure definie a 0.5% et 1% */
+  font-family: 'Roboto-Medium';
+  margin: 0 auto;
+  padding: 0.5% 1%;
 }
 .sectionTitle{
-  text-align: center; /* Centre le titre des sections */
-  font-family: 'Roboto-Black'; /* Defini la police du titre des sections */
-  color: var(--blue); /* Defini la couleur de la police */
-  background-color: var(--white); /* Defini la couleur d'arriere plan */
-  font-size: 2em; /* Defini la taille de la police a 2x celle par defaut du navigateur */
-  white-space: nowrap; /* Empeche le retour a la ligne apres un espace entre deux mots */
+  text-align: center;
+  font-family: 'Roboto-Black';
+  color: var(--blue);
+  background-color: var(--white);
+  font-size: 2em;
+  white-space: nowrap;
 }
-/*--------------------------------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------
 STYLE DU SLIDER
---------------------------------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------*/
 #Slider{
-  font-family: 'Roboto'; /* Defini la police de base du slider */
-  color: var(--black); /* Defini la couleur de base du texte du slider */
+  font-family: 'Roboto';
+  color: var(--black);
 }
 .slides{
-  position: relative; /* Donne a la slide une position relative pour placer l'aside en absolute */
-  min-height: 200px; /* Donne une hauteur minimale aux slides */
-  background-size: cover; /* Defini le dimensionnement de l'image de fond */
-  background-repeat: no-repeat; /* Defini la repetition de l'image de fond */
-  background-position: center; /* Defini la position de l'image de fond */
+  position: relative;
+  min-height: 200px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 #Slide1{
-  background-image: url(../IMG/slider/bg1.jpg); /* Emplacement de l'image de fond */
+  background-image: url(../IMG/slider/bg1.jpg);
 }
 #Slide2{
-  background-image: url(../IMG/slider/bg2.jpg); /* Emplacement de l'image de fond */
-  transform:scaleX(-1); /* Rotation de la slide en miroir sur l'axe vertical pour inverser l'image*/
+  background-image: url(../IMG/slider/bg2.jpg);
+  transform:scaleX(-1);
 }
 #Slide2 aside{
-  transform:scaleX(-1); /* Rotation de l'aside en miroir sur l'axe vertical pour replacer le texte */
+  transform:scaleX(-1);
 }
 .slides aside{
-  position: absolute; /* aside en position absolute par rapport a l'element parent */
-  height: 100%; /* force l'aside a prendre 100% de la hauteur disponible du parent */
-  background-color: rgba(66,66,66,.75); /* Applique une couleur d'arriere plan avec effet de transparence */
-  border-radius: 1px; /* Donne un arondi a la bordure de l'element */
-  color: var(--white); /* Defini la couleur du texte sur blanc */
-  max-width: 66%; /* force l'aside a prendre 60% de la largeur disponible du parent */
+  position: absolute;
+  height: 100%;
+  background-color: rgba(66,66,66,.75);
+  border-radius: 1px;
+  color: var(--white);
+  max-width: 66%;
 }
 .slides #Slide1 aside{
-  float:left; /* force l'aside a flotter du coté gauche de la slide */
+  float:left;
 }
 .slides #Slide1 aside{
-  float:right; /* force l'aside a flotter du coté droit de la slide */
+  float:right;
 }
 .presentation{
-  display: flex; /* fixe la proprieté flex pour que les elements se placent dynamiquement */
-  flex-wrap: wrap; /* force le retour a la ligne si les elements n'ont plus de place */
-  justify-content: center; /* Aligne les objets sur l'axe principal*/
-  align-items: center; /* Aligne les objets sur l'axe secondaire*/
-  margin: 5%; /* marges exterieures fixées a 5% en haut et en bas, et a 2% sur les cotés */
-  text-shadow: .25em .25em .25em var(--black); /* Donne une ombre au texte pour ameliorer la lisibilité */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin: 5%;
+  text-shadow: .25em .25em .25em var(--black);
 }
 .accroche{
-  font-family: 'Roboto-Italic'; /* Titre de la slide en italique */
-  text-transform: uppercase; /* Titre de la slide en majuscules */
+  font-family: 'Roboto-Italic';
+  text-transform: uppercase;
   font-size: 1.25rem;
 }
 .accroche strong{
-  font-size: 1.5rem; /* Fixe la taille de la police*/
-  color: var(--blue); /* Couleur du nom de l'agence en bleu */
-  font-family: 'Roboto-Bold'; /* police du nom de l'agence */
+  font-size: 1.5rem;
+  color: var(--blue);
+  font-family: 'Roboto-Bold';
 }
 .sidetext{
-  font-family: 'Roboto-Medium'; /* Police du texte de presentation */
+  font-family: 'Roboto-Medium';
 }
 .slideshow a{
-  font-family: 'Roboto'; /* Police du bouton de la slide */
-  text-decoration: none; /* Retire la decoration par defaut des liens */
-  color: var(--white); /* couleur du texte en blanc */
-  background-color: var(--blue); /* couleur de fond en bleu */
-  border-radius: 5%; /* donne un arrondi aux coins du bouton */
-  padding: .25em .5em; /* Marge interieure fixée a 25% et 50% de la police de l'element */
-  margin: 5% auto; /* marge exterieure du bas fixée a 6% */
-  min-width: 24%;
-  text-shadow: 0.25em 0.25em 0.25em var(--darkblue); /* Donne une ombre au texte pour ameliorer la lisibilité */
+  font-family: 'Roboto';
+  text-decoration: none;
+  text-align: center;
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 5%;
+  padding: .25em .5em;
+  margin: 5% auto;
+  min-width: 23%;
+  text-shadow: 0.25em 0.25em 0.25em var(--darkblue);
 }
 .arrow{
-  display: none; /* Les fleches du slider ne sont pas affichée sur mobile */
+  display: none;
 }
 
-/*--------------------------------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------
 STYLE DE LA SECTION SERVICES
---------------------------------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------*/
 .services{
-  font-family: 'Roboto'; /* police de la section */
-  color: var(--black); /* couleur du texte de la section */
+  font-family: 'Roboto';
+  color: var(--black);
 }
 .serviceDot{
-  display: none; /* les icones sont masquées sur mobile */
+  display: none;
 }
 #ListeServices li{
-  background-image: url(../IMG/main-feature.png); /* emplacement de l'image d'arriere plan */
-  background-size: cover; /* Defini le dimensionnement de l'image de fond */
-  background-repeat: no-repeat; /* Defini la repetition de l'image de fond */
-  background-position: center; /* Defini la position de l'image de fond */
-  display: flex; /* donne la propriété flex aux elements de la liste */
-  flex-wrap: wrap; /* force les elements a aller a la ligne s'ils manquent d'espace*/
+  background-image: url(../IMG/main-feature.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 #ListeServices li:nth-child(2){
-  justify-content: flex-end; /* Decale le second element de la liste sur la version mobile uniquement */
+  justify-content: flex-end;
 }
 .serviceWrapper{
-  width: 66%; /* force la presentation des services a prendre 2/3 de la largeur de l'element parent */
-  background-color: rgba(92, 173, 211, .75); /* fixe la couleur d'arriere plan bleu transparent */
-  padding: 2%; /* fixe la marge interieure de l'element */
-  color: var(--white); /* couleur de la police */
-  text-shadow: 0.25em 0.25em 0.25em var(--darkblue); /* ajoute une ombre au texte pour ameliorer la lisibilité */
+  width: 66%;
+  background-color: rgba(92, 173, 211, .75);
+  padding: 2%;
+  color: var(--white);
+  text-shadow: 0.25em 0.25em 0.25em var(--darkblue);
 }
 .serviceWrapper h3{
-  font-size: 1.5em; /* Fixe la taille de la police*/
-  text-transform: uppercase; /* Titre en majuscules */
-  text-align: center; /* centre le texte */
-  text-decoration: underline; /* Souligne le titre */
-  font-family: 'Roboto-Bold'; /* police du titre */
+  font-size: 1.5em;
+  text-transform: uppercase;
+  text-align: center;
+  text-decoration: underline;
+  font-family: 'Roboto-Bold';
 }
 .serviceWrapper p{
-  font-size: 1em; /* Fixe la taille de la police */
-  text-align: left; /* aligne le texte a gauche */
-  font-family: 'Roboto-Medium'; /* police du texte */
+  font-size: 1em;
+  text-align: left;
+  font-family: 'Roboto-Medium';
 }
 #Feature{
-  display: none; /* masque l'image sur la version mobile */
+  display: none;
 }
 
-/*--------------------------------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------
 STYLE DE LA SECTION PORTFOLIO
---------------------------------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------*/
 .wrapperPortfolio{
-  display: flex; /* donne la propriété flex aux elements de la liste */
-  flex-wrap: wrap; /* force les elements a aller a la ligne s'ils manquent d'espace*/
-  justify-content: center; /* Aligne les objets sur l'axe principal*/
-  align-items: center; /* Aligne les objets sur l'axe secondaire*/
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 #MenuPortfolio ul{
-  display: flex; /* donne la propriété flex aux elements de la liste */
-  flex-wrap: wrap; /* force les elements a aller a la ligne s'ils manquent d'espace*/
-  justify-content: space-around; /* Espace les elements */
-  background-color: rgba(92, 173, 211, .9); /* Donne une couleur bleue a l'arriere plan du menu portfolio */
-  border-radius: 2.5%; /* Donne un arrondi aux coins de l'element */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: rgba(92, 173, 211, .9);
+  border-radius: 2.5%;
 }
 .menuPortfolio{
-  display: block; /* force les elements du menu portfolio a se comporter en tant que blocks */
-  border-radius: 5%; /* Donne un arrondi aux coins de l'element */
-  padding: 1% 2%; /* marge interieure definie a 1% en haut/bas et 2% sur les côtés */
-  flex-basis: 45%; /* force les elements a prendre 45% de l'espace disponible */
+  display: block;
+  border-radius: 5%;
+  padding: 1% 2%;
+  flex-basis: 45%;
 }
 .menuPortfolio a{
-  font-family: 'Roboto-Medium'; /* Defini la police utilisée pour les liens du menu portfolio */
-  text-decoration: none; /* Retire le souligné */
-  text-transform: uppercase; /* Met les liens en majuscule */
-  white-space: nowrap; /* Empêche le retour a la ligne */
-  color: var(--white); /* ecrit les liens en blanc */
+  font-family: 'Roboto-Medium';
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--white);
 }
 .menuPortfolio:hover a, .menuPortfolio a.selected{
   color: var(--grey);
 }
 .containerPortfolio{
-  display: flex; /* donne la propriété flex aux elements du portfolio */
-  flex-direction: column; /* organise les elements en colonne */
-  justify-content: space-around; /* espace les elements */
-  align-items: center; /* Aligne les elements sur l'axe secondaire */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
 }
 .itemsPortfolio{
-  margin-top: 2%; /* defini la marge superieure */
-  position: relative; /* donne une position relative aux objets du portfolio afin de placer le masque plus facilement */
+  margin-top: 2%;
+  position: relative;
 }
 .itemsLabelMask{
-  opacity: 0; /* Masque invisible par defaut */
-  background-color: rgba(0,0,0, .5); /* applique une couleur de fond avec effet de transparence */
-  padding: 1% 2%; /* defini les marges interieures */
-  position: absolute; /* en position absolute par rapport au parent */
-  bottom: 0.75%; /* deplace le bas de l'element */
-  width: 100%; /* force le masque a prendre 100% de la largeur de l'element parent */
-  height: 100%; /* force le masque a prendre 100% de la hauteur de l'element parent */
-  text-transform: capitalize; /* met la premiere lettre de chaque mot en MAJ */
-  display: flex; /* donne au masque la proprieté flex */
-  align-items: flex-end; /* aligne les elements a la fin de l'axe secondaire */
+  opacity: 0;
+  background-color: rgba(0,0,0, .5);
+  padding: 1% 2%;
+  position: absolute;
+  bottom: 0.75%;
+  width: 96%;
+  height: 33%;
+  text-transform: capitalize;
+  display: flex;
+  align-items: flex-end;
 }
 .itemsLabelMask:hover{
-  opacity: 1; /* affiche le masque lors du survol de la souris */
+  opacity: 1;
 }
 .itemsLabel{
-  color: var(--white); /* defini la couleur de la police */
-  text-shadow: 0.25em 0.25em 0.25em var(--black); /* ajoute une ombre au texte pour ameliorer la lisibilité */
-  font-family: 'Roboto-Medium'; /* defini la police utilisée */
-  margin-left: 2.5%; /* defini la marge interieure gauche */
-  margin-bottom: 2.5%; /* defini la marge interieure du bas */
+  color: var(--white);
+  text-shadow: 0.25em 0.25em 0.25em var(--black);
+  font-family: 'Roboto-Medium';
+  margin-left: 2.5%;
+  margin-bottom: 2.5%;
 }
 .itemsLabel h3{
-  font-size: 1em; /* defini la taille de la police */
+  font-size: 1em;
 }
 .itemsLabel p{
-  font-size: 0.8em; /* defini la taille de la police */
+  font-size: 0.8em;
 }
 .fa-eye{
-  background-color: var(--blue); /* defini la couleur d'arriere plan' */
-  border: 0.1rem solid var(--white); /* defini la bordure de l'item */
-  border-radius: 50%; /* border radius a 50% pour former un cercle */
-  color: var(--white); /* defini la couleur de la police */
-  padding: 0.25rem; /* defini une marge interieure */
-  font-size: 2rem; /* defini la taille de la police */
-  position: absolute; /* objet en position absolute pour le deplacer par rapport a l'element parent */
-  top: 10.5%; /* haut deplacé par rapport a l'element parent */
-  right: 5.5%; /* deplacé par rapport a l'element parent */
+  background-color: var(--blue);
+  border: 0.1rem solid var(--white);
+  border-radius: 50%;
+  color: var(--white);
+  padding: 0.25rem;
+  font-size: 2rem;
+  position: absolute;
+  top: 10.5%;
+  right: 5.5%;
 }
 
-/*--------------------------------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------
 STYLE DE LA SECTION CONTACT
---------------------------------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------*/
 #Contact{
-  display: flex; /* donne la propriété flex a l'element */
-  flex-direction: column; /* aligne le contenu selon l'axe vertical */
-  justify-content: center; /* organise les elements sur l'axe principal */
-  align-items: center; /* organise les elements sur l'axe secondaire */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .mapMask{
-  order: 1; /* place la carte a la fin */
+  order: 1;
 }
 #Map iframe{
-  width: 100vw; /* defini la largeur de l'element a 100% de la largeur de la vue */
+  width: 100vw;
 }
 #Contact fieldset{
-  width: 100vw; /* defini la largeur de l'element a 100% de la largeur de la vue */
-  order: 0; /* place le formulaire de contact au debut */
-  border: none; /* supprime les bordures par defaut */
-  text-align: center; /* aligne le texte au centre */
-  color: var(--black); /* defini la couleur de la police */
+  width: 100vw;
+  order: 0;
+  border: none;
+  text-align: center;
+  color: var(--black);
 }
 #ContactInfos p{
-  font-family: 'Roboto-Medium'; /* defini la police de l'element */
-  font-size: 1.2em; /* defini la taille de la police */
+  font-family: 'Roboto-Medium';
+  font-size: 1.2em;
 }
 
 form{
-background-color: var(--blue); /* defini la couleur d'arriere plan */
-padding: .25em; /* donne une marge interieure a l'element */
+background-color: var(--blue);
+padding: .25em;
 }
 form p input, form p textarea{
-  width: 90vw; /* force les elements a prendre 90% de la largeur de la vue */
-  margin: 0.25em auto; /* defini la marge exterieure a l'element */
-  border: none; /* supprime les bordures par defaut */
-  height: 1.75em; /* defini la taille de l'element */
-  font-family: 'Roboto-Italic'; /* defini la police de l'element */
-  padding: .25em; /* donne une marge interieure a l'element */
-  font-size: 1.25em; /* defini la taille de la police */
+  width: 90vw;
+  margin: 0.25em auto;
+  border: none;
+  height: 1.75em;
+  font-family: 'Roboto-Italic';
+  padding: .25em;
+  font-size: 1.25em;
 }
 form p textarea{
-  height: 5em; /* defini la taille de l'element */
+  height: 5em;
 }
 .button input{
-  width: 50vw; /* force l'element a prendre 50% de la largeur de la vue */
-  color:var(--blue); /* defini la couleur de la police */
-  background-color: var(--white); /* defini la couleur d'arriere plan */
-  font-family: 'Roboto-Bold'; /* defini la police de l'element */
-  font-size: 1.25em; /* defini la taille de la police */
-  font-variant: small-caps; /* met le texte en petites majuscules */
+  width: 50vw;
+  color:var(--blue);
+  background-color: var(--white);
+  font-family: 'Roboto-Bold';
+  font-size: 1.25em;
+  font-variant: small-caps;
 }
 
-/*--------------------------------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------
 STYLE POUR TABLETTES
---------------------------------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------*/
 @media screen and (min-width: 480px) and (max-width: 1024px){
 
-/* Style general */
+/*Style general*/
 .anchor{
   top: -60px;
 }
@@ -385,7 +388,7 @@ p.undertext{
   max-width: 75%;
 }
 
-/* Style du header */
+/*Style du header*/
 #Topbar{
   flex-direction: row;
   justify-content: space-around;
@@ -436,14 +439,14 @@ p.undertext{
   width: 90%;
   margin: 0 auto;
 }
-/*----------------------------------------------------------
+/*----------------------------------
 FERMETURE DU MEDIA QUERIES POUR TABLETTES
------------------------------------------------------------*/
+-----------------------------------*/
 }
 
-/*--------------------------------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------
 STYLE POUR ECRANS DESKTOP
---------------------------------------------------------------------------------------------------------------*/
+---------------------------------------------------------------------*/
 @media screen and (min-width: 1024px){
 
 /*Style general*/
@@ -484,14 +487,14 @@ STYLE POUR ECRANS DESKTOP
 .anchor{
   top: -100px;
 }
-/* Style du header */
+/*Style du header*/
 #Topbar{
-  position: fixed; /* L'attribut 'fixed' maintiens la barre de menu a la position fixée lors du scroll*/
+  position: fixed;
   z-index: 10;
   top: 0;
   left: 0;
   right: 0;
-  background-color: var(--white); /*appelle la variable de couleur blanche*/
+  background-color: var(--white);
   font-family: 'Roboto-Bold', sans-serif;
   max-height: 100px;
   max-width: 100vw;
@@ -543,6 +546,7 @@ a:hover.menuItems{
 .arrow{
   display: inline-block;
   position: absolute;
+  top: 250px;
   background-color: rgba(0,0,0,.5);
   color: var(--white);
   font-weight: lighter;
@@ -575,7 +579,7 @@ a:hover.menuItems{
 .slides aside{
   background-color: transparent;
   max-width: 45%;
-  margin: 4% 0% 0% 7%;
+  margin: 10% 0% 0% 7%;
   position: absolute;
 }
 .presentation{
@@ -604,7 +608,7 @@ a:hover.menuItems{
   text-shadow: none;
   margin: 0;
   margin-top: 2.5%;
-  padding: 2% 3%;
+  padding: 2%;
   white-space: nowrap;
   border-bottom: 0.2em solid #538ca9;
 }
@@ -649,7 +653,7 @@ a:hover.menuItems{
   width: 510px;
   height: 320px;
   max-width: 60vw;
-  margin: 0 5%;
+  margin: 0 2.5% 0 7.5%;
 }
 #ListeServices{
   margin-right: 7%;
@@ -715,6 +719,7 @@ a:hover.menuItems{
 #MenuPortfolio ul{
   background-color: var(--lightgrey);
   flex-wrap: nowrap;
+  align-items: center;
   width: 30%;
   margin: 0 auto;
   border-radius: 7px;
@@ -772,23 +777,24 @@ a:hover.menuItems{
   margin: 1%;
 }
 .itemsPortfolio img{
-  max-width: 20vw;
+  width: 20vw;
 }
 .itemsLabel{
   background-color: rgba(0,0,0, .5);
   min-width: 100%;
-  min-height: 30%;
+  min-height: 100%;
   margin: 0;
   padding: 1% 2%;
 }
 .fa-eye{
-  top: 60%;
+  top: -30%;
   min-width: 35px;
   height: 35px;
   padding: 9px;
   font-size: 5px;
 }
 .itemsLabelMask{
+  width: 20vw;
   padding: 0;
   background-color: transparent;
 }
@@ -827,7 +833,7 @@ a:hover.menuItems{
 }
 #Contact fieldset{
   position: absolute;
-  top: 6%;
+  top: 1.5%;
   right: 9%;
   max-width: 22.5%;
   background-color: rgba(240,240,255,.75);
@@ -901,62 +907,168 @@ form .button input:hover{
   padding-left: 0.5em;
   font-size: 1em;
 }
-::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+::-webkit-input-placeholder {
   padding-left: 0.5em;
   font-size: 1em;
 }
-::-moz-placeholder { /* Firefox 19+ */
+::-moz-placeholder {
  padding-left: 0.5em;
  font-size: 1em;
 }
-::-ms-input-placeholder { /* IE 10+ */
+::-ms-input-placeholder {
   padding-left: 0.5em;
   font-size: 1em;
 }
-::-moz-placeholder { /* Firefox 18- */
+::-moz-placeholder {
   padding-left: 0.5em;
   font-size: 1em;
 }
 
-/*----------------------------------------------------------
+/*----------------------------------
 FERMETURE DU MEDIA QUERIES DESKTOP
------------------------------------------------------------*/
+-----------------------------------*/
 }
 
-/*--------------------------------------------------------------------------------------------------------------
+/*---------------------------------------------------------------------
 STYLE POUR ECRANS XXL
---------------------------------------------------------------------------------------------------------------*/
-@media screen and (min-width: 1720px){
+---------------------------------------------------------------------*/
+@media screen and (min-width: 2000px){
 .anchor{
-  top: -120px;
+  top: -150px;
 }
-#Content{
-  margin: .25%;
-  max-width: 100%;
+.sectionTitle{
+  font-size: 3.5rem;
+}
+.sections aside .undertext{
+  font-size: 1.5rem;
+}
+.menuItems{
+  font-size: 1.9rem;
+  line-height: 150px;
+  padding-top: 9px;
+}
+.slides{
+  min-height: 1140px;
 }
 .slideshow a{
   min-width: unset;
+  font-size: 1.75rem;
+}
+.arrow{
+  top: 50%;
+  line-height: 70px;
+  font-size: 70px;
+  max-height: 150px;
+  padding: 5px 15px;
+}
+.arrowRight{
+  right: -20px;
+}
+.presentation{
+  font-size: 1.5rem;
+}
+.accroche strong{
+  font-size: 2.75rem;
 }
 #ServicesContainer{
-  margin: 2.5% 5%;
+  margin: 2.5% 0 2.5% 5%;
+}
+#Feature{
+  width: 1500px;
+  height: 880px;
+  margin-left: 3.5%;
 }
 #ListeServices{
   margin-right: 2.5%;
 }
-
-#ListeServices li{
+#ListeServices li, #ListeServices li:nth-child(2){
+  margin-top: 2.5%;
   display: flex;
+}
+.serviceWrapper{
+  margin-top: 0;
+  margin-bottom: -6.5%;
+}
+.serviceWrapper h3{
+  font-size: 1.75rem;
+}
+.serviceWrapper p{
+  line-height: 1.75rem;
+  font-size: 1.75rem;
+}
+.serviceDot{
+  width: 100px;
+  height: 100px;
+  margin: 70px;
+}
+.fa-chart-line, .fa-cubes, .fa-chart-pie{
+  min-height: 130px;
+  min-width: 130px;
+  padding: 30px;
+}
+.dot{
+  height: 1.5rem !important;
+  width: 1.5rem !important;
+  left: -15px;
+  max-width: none;
+}
+.menuPortfolio{
+  line-height: normal;
+}
+.menuPortfolio a{
+  font-size: 1.5rem;
+  padding: 0;
+  padding-top: .5rem;
 }
 .itemsPortfolio{
   flex-basis: 20%;
 }
-.mapMask, #Map iframe {
-  min-height: 635px;
-}
 .itemsLabelMask{
-  width: 73%;
+  width: 100%;
 }
-/*----------------------------------------------------------
+.itemsLabel h3{
+  font-size: 1.75rem;
+}
+.itemsLabel p{
+  font-size: 1.5rem;
+}
+.fa-eye{
+  min-width: 70px;
+  height: 70px;
+  padding: 18px;
+  font-size: 10px;
+  top: 40%;
+}
+.mapMask, #Map iframe {
+  min-height: 1024px;
+}
+#Contact fieldset{
+  padding: .5% .25%;
+  min-height: 80%;
+  top: 9.5%;
+}
+#ContactInfos h2{
+  font-size: 3rem;
+}
+#ContactInfos h3{
+  font-size: 2rem;
+}
+#ContactInfos p{
+  font-size: 2rem;
+}
+form p input, form p textarea{
+  font-size: 2.5rem;
+  height: 2.75rem;
+  margin-top: 2.5%;
+}
+form .button input{
+  font-size: 1.25rem;
+  width: 150px;
+  height: 45px;
+  margin-top: 5%;
+}
+
+/*----------------------------------
 FERMETURE DU MEDIA QUERIES XXL
------------------------------------------------------------*/
+-----------------------------------*/
 }
