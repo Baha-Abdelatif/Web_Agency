@@ -58,10 +58,10 @@ STYLE DE LA PARTIE EN TETE DU SITE
 a:hover.menuItems{
   color: var(--blue);
   font-family: 'Roboto-Black';
-  -webkit-transition-property: all;
-  transition-property: all;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-property: color, font-family;
+  transition-property: color, font-family;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
 }
 
 /*---------------------------------------------------------------------
@@ -274,6 +274,10 @@ STYLE DE LA SECTION PORTFOLIO
 }
 .menuPortfolio:hover a, .menuPortfolio a.selected{
   color: var(--grey);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
 }
 .containerPortfolio{
   display: flex;
@@ -301,6 +305,10 @@ STYLE DE LA SECTION PORTFOLIO
 }
 .itemsPortfolio:hover .itemsLabelMask{
   opacity: 1;
+  -webkit-transition-property: opacity;
+  transition-property: opacity;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
 }
 .itemsLabel{
   color: var(--white);
@@ -536,10 +544,10 @@ a:hover.menuItems{
   border-top: 9px solid var(--blue);
   color: var(--black);
   padding: 0 15px;
-  -webkit-transition-property: color, background-color;
-  transition-property: color, background-color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-property: color, border-top, padding;
+  transition-property: color, border-top, padding;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
 }
 
 /*Style du Slider*/
@@ -571,8 +579,8 @@ a:hover.menuItems{
   color: var(--black);
   -webkit-transition-property: color, background-color;
   transition-property: color, background-color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
   cursor: pointer;
 }
 .arrowLeft{
@@ -627,8 +635,8 @@ a:hover.menuItems{
   color: var(--blue);
   -webkit-transition-property: background-color, color;
   transition-property: background-color, color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
 }
 #Slide2{
   position: absolute;
@@ -736,6 +744,10 @@ a:hover.menuItems{
 }
 .menuPortfolio:hover a, .menuPortfolio.selected a{
   color: var(--white);
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
 }
 .menuPortfolio{
   margin: 0;
@@ -749,10 +761,10 @@ a:hover.menuItems{
   padding-bottom: 0;
   padding-top: 15px;
   background-color: var(--blue);
-  -webkit-transition-property: background-color, color;
-  transition-property: background-color, color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-property: border-bottom, background-color;
+  transition-property: border-bottom, background-color;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
 }
 .menuPortfolio:hover:after, .menuPortfolio.selected:after{
   display: block;
@@ -770,8 +782,8 @@ a:hover.menuItems{
   background-color: transparent;
   -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
 }
 .menuPortfolio a{
   color: var(--grey);
@@ -814,8 +826,8 @@ a:hover.menuItems{
   opacity: 1;
   -webkit-transition-property: opacity;
   transition-property: opacity;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
 }
 
 /*Style du Contact*/
@@ -905,15 +917,16 @@ form .button input{
   border-bottom: 3px solid var(--darkblue);
   border-radius: 3px;
 }
-form .button input:hover{
+form .button:hover input{
   cursor: pointer;
-  background-color: var(--darkblue);
-  border-bottom: 3px solid var(--blue);
-  text-shadow: 1px 1px 1px var(--blue);
-  -webkit-transition-property: background-color, border-bottom, text-shadow;
-  transition-property: background-color, border-bottom, text-shadow;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
+  background-color: var(--white);
+  color: var(--blue);
+  border-bottom: 3px solid var(--darkblue);
+  text-shadow: none;
+  -webkit-transition-property: color, background-color, border-bottom, text-shadow;
+  transition-property: color, background-color, border-bottom, text-shadow;
+  -webkit-transition-duration: .33s;
+  transition-duration: .33s;
 }
 ::placeholder{
   padding-left: 0.5em;
