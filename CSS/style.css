@@ -291,7 +291,7 @@ STYLE DE LA SECTION PORTFOLIO
   background-color: rgba(0,0,0, .5);
   padding: 1% 2%;
   position: absolute;
-  bottom: 0.75%;
+  bottom: 1.5%;
   width: 100%;
   height: 33%;
   text-transform: capitalize;
@@ -808,6 +808,7 @@ a:hover.menuItems{
   width: 20vw;
   padding: 0;
   background-color: transparent;
+  bottom: 2.5%;
 }
 .itemsLabelMask:hover{
   opacity: 1;
@@ -1039,6 +1040,10 @@ STYLE POUR ECRANS XXL
 }
 .itemsLabelMask{
   width: 100%;
+  bottom: 0.5%;
+}
+.itemsLabel{
+  padding: 3%;
 }
 .itemsLabel h3{
   font-size: 1.75rem;
