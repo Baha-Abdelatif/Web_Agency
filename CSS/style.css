@@ -262,10 +262,10 @@ STYLE DE LA SECTION PORTFOLIO
 }
 .menuPortfolio a{
   font-family: 'Roboto-Medium';
-  text-decoration: none;
   text-transform: uppercase;
   white-space: nowrap;
   color: var(--white);
+  text-decoration: none;
 }
 .menuPortfolio:hover a, .menuPortfolio a.selected{
   color: var(--grey);
@@ -282,6 +282,7 @@ STYLE DE LA SECTION PORTFOLIO
 }
 .itemsLabelMask{
   opacity: 0;
+  cursor: pointer;
   background-color: rgba(0,0,0, .5);
   padding: 1% 2%;
   position: absolute;
@@ -290,7 +291,8 @@ STYLE DE LA SECTION PORTFOLIO
   height: 33%;
   text-transform: capitalize;
   display: flex;
-  align-items: flex-end;
+  align-items: flex-end;  
+  text-decoration: none;
 }
 .itemsLabelMask:hover{
   opacity: 1;
@@ -298,6 +300,7 @@ STYLE DE LA SECTION PORTFOLIO
 .itemsLabel{
   color: var(--white);
   text-shadow: 0.25em 0.25em 0.25em var(--black);
+  text-decoration: none;
   font-family: 'Roboto-Medium';
   margin-left: 2.5%;
   margin-bottom: 2.5%;
@@ -331,6 +334,7 @@ STYLE DE LA SECTION CONTACT
 }
 .mapMask{
   order: 1;
+  background-color: var(--darkblue);
 }
 #Map iframe{
   width: 100vw;
@@ -591,11 +595,11 @@ a:hover.menuItems{
 }
 .accroche{
   display: inline;
-  font-size: 2.25rem;
+  font-size: 2rem;
   font-family: 'Roboto-Black';
 }
 .accroche strong{
-  font-size: 2.25rem;
+  font-size: 2.5rem;
   font-family: 'Roboto-Black';
 }
 .sidetext{
@@ -728,6 +732,7 @@ a:hover.menuItems{
   color: var(--white);
 }
 .menuPortfolio{
+  margin: 0;
   padding: 10px 0;
   padding-bottom: 10px;
   flex-basis: 25%;
@@ -736,6 +741,7 @@ a:hover.menuItems{
 .menuPortfolio:hover, .menuPortfolio.selected{
   border-bottom: 5px solid var(--darkblue);
   padding-bottom: 0;
+  padding-top: 15px;
   background-color: var(--blue);
   -webkit-transition-property: background-color, color;
   transition-property: background-color, color;
