@@ -486,7 +486,6 @@ STYLE POUR ECRANS DESKTOP
   margin: 0;
   width: 25px;
   height: 25px;
-  border-radius: 50%;
   border: 0.25em solid var(--white);
 }
 .sections aside .undertext{
@@ -975,10 +974,7 @@ STYLE POUR ECRANS XXL
   top: 50%;
   width: 100px;
   height: 100px;
-  line-height: 70px;
-  font-size: 70px;
-  max-height: 150px;
-  padding: 5px 15px;
+  font-size: 60px;
 }
 .arrowRight{
   right: -30px;
