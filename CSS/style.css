@@ -632,6 +632,7 @@ a:hover.menuItems{
 #Slide2{
   position: absolute;
   left: -200%; /* Decalage de la seconde slide sur la version desktop */
+  top: 15%;
 }
 .statusBar{
   width: 100%;
@@ -826,12 +827,6 @@ a:hover.menuItems{
   display: block;
   position: relative;
 }
-.mapMask{
-  background-color: var(--darkblue);
-}
-#Map{
-  order: 0;
-}
 #Map iframe{
   opacity: 0.7;
 }
@@ -948,7 +943,7 @@ FERMETURE DU MEDIA QUERIES DESKTOP
 /*---------------------------------------------------------------------
 STYLE POUR ECRANS XXL
 ---------------------------------------------------------------------*/
-@media screen and (min-width: 2000px){
+@media screen and (min-width: 3840px){
 .anchor{
   top: -150px;
 }
