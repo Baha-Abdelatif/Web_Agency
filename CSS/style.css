@@ -201,27 +201,50 @@ STYLE DE LA SECTION SERVICES
   font-family: 'Roboto';
   color: var(--black);
 }
+#Feature{
+  width: 80%;
+  margin: 0 10%;
+}
 .serviceDot{
-  display: none; /* Icone des services masquée sur mobile */
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  width: 65px;
+  height: 65px;
+  margin: 0 auto;
+}
+.fa-chart-line, .fa-cubes, .fa-chart-pie{
+    border: 0.1em solid var(--lightgrey);
+    border-radius: 50%;
+    min-height: 65px;
+    min-width: 65px;
+    padding: 15px;
+}
+.dot{
+    position: relative;
+    left: -7px;
+    max-width: 0.75em;
 }
 #ListeServices li{
-  background-image: url(../IMG/main-feature.png); /* L'illustration est remplacée par une image d'arriere plan */
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
   display: flex;
-  flex-wrap: wrap;
-}
-#ListeServices li:nth-child(2){
-  justify-content: flex-end; /* Decalage du second element de la liste des services */
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
 }
 .serviceWrapper{
-  width: 70%;
-  background-color: var(--blue);
   padding: 2%;
+  background-color: var(--blue);
   color: var(--white);
-  text-shadow: 0.25em 0.25em 0.25em var(--darkblue); /* Ajout d'une ombre au texte pour faciliter la lecture sur fond clair */
+  border: 3px solid var(--white);
+  max-width: 70%;
 }
+#UI .serviceDot{
+  order: 1;
+}
+#UI .serviceWrapper{
+  order: 0;
+}
+
 .serviceWrapper h3{
   font-size: 1.5em;
   text-transform: uppercase;
@@ -231,12 +254,11 @@ STYLE DE LA SECTION SERVICES
 }
 .serviceWrapper p{
   font-size: 1em;
-  text-align: left;
   font-family: 'Roboto-Medium';
+  text-align: justify;
+  text-shadow: 1px 1px 1px var(--darkblue);
 }
-#Feature{
-  display: none; /* Illustration de la section masquée sur mobile */
-}
+
 
 /*---------------------------------------------------------------------
 STYLE DE LA SECTION PORTFOLIO
@@ -373,8 +395,8 @@ form p input, form p textarea{
   border: none;
   height: 1.75em;
   font-family: 'Roboto-Italic';
-  padding: .25em;
-  font-size: 1.25em;
+  padding: .75em .25em;
+  font-size: 1em;
 }
 form p textarea{
   height: 5em;
@@ -386,6 +408,7 @@ form p textarea{
   font-family: 'Roboto-Bold';
   font-size: 1.25em;
   font-variant: small-caps; /* Transforme le texte en petites majuscules */
+  padding: 0;
 }
 
 /*---------------------------------------------------------------------
@@ -437,7 +460,7 @@ p.undertext{
 .containerPortfolio{
   flex-direction: row;
   flex-wrap: wrap;
-  margin-top: 1%;
+  margin-top: 50px;
 }
 .itemsPortfolio{
   width: 45%; /* Empeche les elements du portfolio de prendre plus de 45% de la largeur */
@@ -647,9 +670,6 @@ a:hover.menuItems{
 }
 
 /*Style des Services*/
-#Services{
-  margin-bottom: 10%;
-}
 #Services aside{
   width: 100vw;
 }
@@ -667,14 +687,14 @@ a:hover.menuItems{
 }
 #ListeServices{
   margin-right: 7%;
+  margin-top: 5%;
+  max-width: 45%;
 }
 #ListeServices li, #ListeServices li:nth-child(2){
   background: none;
   justify-content: center;
 }
 .serviceWrapper{
-  margin-top: 10%;
-  margin-bottom: -7.5%;
   background-color: transparent;
   color: var(--black);
   text-shadow: none;
@@ -684,14 +704,17 @@ a:hover.menuItems{
   text-transform: initial;
   text-align: left;
   text-decoration: none;
-  font-family: 'Roboto-Black';
+}
+#UI .serviceDot{
+  order: 0;
+  margin: 35px;
 }
 .serviceWrapper p {
-  line-height: 1em;
-  font-size: 1em;
+  font-size: 0.9em;
   text-align: left;
-  font-family: 'Roboto-Light';
-  margin: 2% 0;
+  font-family: 'Roboto';
+  margin: 2.5% 0;
+  text-shadow: none;
 }
 #ListeServices li, #ListeServices li:nth-child(2){
   display: inline-flex;
@@ -700,26 +723,9 @@ a:hover.menuItems{
   align-items: center;
 }
 .serviceDot{
-  color: var(--blue);
-  display: flex;
-  align-items: center;
   width: 50px;
   height: 50px;
   margin: 35px;
-  position: relative;
-  top: 45px;
-}
-.fa-chart-line, .fa-cubes, .fa-chart-pie{
-    border: 0.1em solid var(--lightgrey);
-    border-radius: 50%;
-    min-height: 65px;
-    min-width: 65px;
-    padding: 15px;
-}
-.dot{
-    position: relative;
-    left: -7px;
-    max-width: 0.75em;
 }
 
 /*Style du Portfolio*/
@@ -731,7 +737,7 @@ a:hover.menuItems{
   flex-wrap: nowrap;
   align-items: center;
   width: 30%;
-  margin: 0 auto;
+  margin: 30px auto;
   border-radius: 7px;
 }
 .menuPortfolio:hover a, .menuPortfolio.selected a{
@@ -844,8 +850,8 @@ a:hover.menuItems{
 #Contact fieldset{
   position: absolute;
   top: 5.5%;
-  right: 9%;
-  max-width: 22.5%;
+  right: 5.5%;
+  max-width: 25.5%;
   background-color: rgba(240,240,255,.75);
   padding: 2% 1%;
 }
@@ -857,7 +863,7 @@ a:hover.menuItems{
 }
 .formElements *{
   border: 0.5px solid var(--grey);
-  border-radius: 2.75%;
+  border-radius: 5px;
 }
 #ContactInfos h2{
   font-size: 1.5em;
@@ -877,7 +883,6 @@ a:hover.menuItems{
   padding: 1%;
 }
 #ContactMessage{
-  resize: none;
   font-style: normal;
   height: 150px;
 }
@@ -995,13 +1000,9 @@ STYLE POUR ECRANS XXL
   margin-right: 2.5%;
 }
 #ListeServices li, #ListeServices li:nth-child(2){
-  margin-top: 2.5%;
   display: flex;
 }
-.serviceWrapper{
-  margin-top: 0;
-  margin-bottom: -6.5%;
-}
+
 .serviceWrapper h3{
   font-size: 1.75rem;
 }
